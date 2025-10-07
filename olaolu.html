@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>All Things OLAOLUDOTCOM — Celebrate, Support, Connect</title>
+  <meta name="description" content="Official hub for OLAOLUDOTCOM — shop, socials, books, contact, and ways to support our work. Bright pastel joyful design made to delight in the first 3 seconds." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --p1:#FDECEF; /* pale pink */
+      --p2:#FEF3C7; /* pale yellow */
+      --p3:#E8F2FF; /* pale blue */
+      --p4:#F3E8FF; /* pale lavender */
+      --accent:#ec4899; /* hot accent */
+      --muted: #334155;
+    }
+    html,body{height:100%;}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,var(--p1),var(--p2)); color:var(--muted);}
+    /* Hero gradient animation for instant wow */
+    .hero{background:conic-gradient(from 120deg at 50% 50%, rgba(249,168,212,.9), rgba(253,230,138,.9), rgba(147,197,253,.9), rgba(243,232,255,.9)); background-size: 400% 400%; animation: slideBg 10s linear infinite; border-radius: 18px;}
+    @keyframes slideBg{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .glass{backdrop-filter: blur(6px) saturate(120%); background: rgba(255,255,255,0.65); border: 1px solid rgba(255,255,255,0.6);}
+    .pulse-subtle{animation: pulse 2.4s infinite;}
+    @keyframes pulse{0%{transform:scale(1);box-shadow:0 0 0 rgba(236,72,153,0.25)}50%{transform:scale(1.03);box-shadow:0 8px 30px rgba(236,72,153,0.08)}100%{transform:scale(1);box-shadow:0 0 0 rgba(236,72,153,0.0)}}
+    .floating-support{position:fixed;right:22px;bottom:22px;z-index:9999}
+    .card-icon{width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center}
+    a.link-joy{position:relative;display:inline-block;padding:8px 12px;border-radius:999px;font-weight:600}
+    a.link-joy::after{content:'';position:absolute;inset:0;border-radius:999px;box-shadow:0 6px 18px rgba(16,24,40,0.06);opacity:0;transition:opacity .25s}
+    a.link-joy:hover::after{opacity:1}
+    /* small responsive tweaks */
+    @media (max-width:640px){ .hero h1{font-size:1.6rem} .hero p{font-size:0.95rem} }
+    /* spotlight animation for immediate attention */
+    .spotlight:hover{transform:translateY(-6px) scale(1.02);transition:transform 0.25s ease}
+    .small-muted{color: #57606a;font-size:0.95rem}
+  </style>
+</head>
+<body>
+  <!-- Floating persistent support button -->
+  <div class="floating-support">
+    <a href="https://sweetite-unlimited.lovable.app/" target="_blank" class="glass inline-flex items-center gap-3 px-4 py-3 shadow-lg rounded-full hover:scale-105 transition transform" aria-label="Support Us ❤️">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class=""> <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <span class="font-semibold text-sm">Support Us ❤️</span>
+    </a>
+  </div>
+
+  <header class="max-w-6xl mx-auto px-6 pt-8">
+    <nav class="flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl glass flex items-center justify-center shadow"> 
+          <strong class="text-xl" style="color:var(--accent)">OLA</strong>
+        </div>
+        <div>
+          <div class="text-sm small-muted">All Things</div>
+          <div class="text-lg font-extrabold">OLAOLUDOTCOM</div>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#shop" class="link-joy">Shop</a>
+        <a href="#social" class="link-joy">Social</a>
+        <a href="#books" class="link-joy">Books</a>
+        <a href="#hubs" class="link-joy">Web Hubs</a>
+        <a href="#contact" class="link-joy">Contact</a>
+        <a href="#legal" class="link-joy">Legal</a>
+        <a href="https://sweetite-unlimited.lovable.app/" target="_blank" class="ml-3 px-4 py-2 rounded-full bg-white font-bold shadow text-pink-600 pulse-subtle">💖 Contribute</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menuBtn" class="glass px-3 py-2 rounded-lg">Menu</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-8 grid gap-8">
+    <!-- Hero -->
+    <section class="hero glass p-8 md:p-12 shadow-lg" aria-labelledby="hero-title">
+      <div class="md:flex md:items-center md:gap-8">
+        <div class="flex-1">
+          <h1 id="hero-title" class="text-4xl md:text-5xl font-extrabold leading-tight">Welcome to <span style="color:var(--accent)">OLAOLUDOTCOM</span> — The Celebration Hub</h1>
+          <p class="mt-4 text-lg small-muted">Joyful, generous, and uplifting content — official shop, books, social channels, and many ways to support our creative work. Built to delight the first three seconds and keep you smiling for life.</p>
+
+          <div class="mt-6 flex gap-3 flex-wrap">
+            <a href="#social" class="bg-white px-4 py-2 rounded-full font-semibold">Explore socials</a>
+            <a href="#shop" class="bg-white/90 px-4 py-2 rounded-full font-semibold">Visit shop</a>
+            <a href="https://sweetite-unlimited.lovable.app/" class="px-4 py-2 rounded-full bg-pink-100 font-bold text-pink-700">Support us ❤️</a>
+          </div>
+
+          <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="p-3 glass rounded-lg">
+              <div class="text-sm small-muted">Official Store</div>
+              <a href="https://olaoludotcom-shop.fourthwall.com/en-usd/" target="_blank" class="font-semibold block mt-2">olaoludotcom shop</a>
+            </div>
+            <div class="p-3 glass rounded-lg">
+              <div class="text-sm small-muted">Beacons & Hubs</div>
+              <a href="https://website.beacons.ai/olaoludotcom/websites/live/d02a917b-32ee-423a-9b1e-e0884adae70e?=" target="_blank" class="font-semibold block mt-2">main beacons</a>
+            </div>
+            <div class="p-3 glass rounded-lg">
+              <div class="text-sm small-muted">Contact</div>
+              <a href="https://sites.google.com/olaolu.com/olaolu-dotcom/contact-us" target="_blank" class="font-semibold block mt-2">Contact page</a>
+            </div>
+            <div class="p-3 glass rounded-lg">
+              <div class="text-sm small-muted">Schedule</div>
+              <a href="https://app.acuityscheduling.com/schedule.php?owner=12499645" target="_blank" class="font-semibold block mt-2">Book a session</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden md:block md:w-1/3">
+          <!-- joyful visual card -->
+          <div class="glass rounded-2xl p-6 shadow-lg spotlight">
+            <div class="flex items-center gap-4">
+              <div class="card-icon bg-white/80"> 
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s-6-4.35-8.5-7.14C1.7 11.61 5.2 6 12 6s10.3 5.61 8.5 7.86C18 16.65 12 21 12 21z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="text-sm small-muted">Join our celebration</div>
+                <div class="font-bold text-lg">Live events, videos & new releases</div>
+              </div>
+            </div>
+            <div class="mt-4 small-muted">Featured video</div>
+            <a href="https://www.youtube.com/watch?v=QCxNsdXwKE4" target="_blank" class="mt-3 inline-block w-full glass p-2 rounded-lg">Watch: "One Minute Inspiration"</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards grid: Shop, Social, Books, Hubs, Contact, Legal -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Shop & Merch -->
+      <div id="shop" class="glass p-6 rounded-xl shadow">
+        <h3 class="font-extrabold text-xl">Shop & Merch</h3>
+        <p class="small-muted mt-1">Official store and other stores where you can find official merchandise and products.</p>
+        <ul class="mt-4 space-y-3">
+          <li><a class="block link-joy" href="https://olaoludotcom-shop.fourthwall.com/en-usd/" target="_blank">Official shop — Fourthwall</a></li>
+          <li><a class="block link-joy" href="https://beacons.ai/olaoludotcom" target="_blank">Beacons (shop & links)</a></li>
+          <li><a class="block link-joy" href="https://website.beacons.ai/olaoludotcom/websites/live/b0f5fe84-55f2-482f-803c-aff737fefb4c?=" target="_blank">Beacons (alternate)</a></li>
+          <li><a class="block link-joy" href="https://website.beacons.ai/olaoludotcom/websites/live/d02a917b-32ee-423a-9b1e-e0884adae70e?=" target="_blank">Beacons (main)</a></li>
+          <li><a class="block link-joy" href="https://olaoludotcom.weebly.com/" target="_blank">Weebly store / pages</a></li>
+          <li><a class="block link-joy" href="https://sofatoyedotcom.weebly.com/" target="_blank">SofaToyedotcom (related)</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div id="social" class="glass p-6 rounded-xl shadow">
+        <h3 class="font-extrabold text-xl">Social Media</h3>
+        <p class="small-muted mt-1">Follow, subscribe and join the conversation across platforms.</p>
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="https://www.instagram.com/olaoludotcom/" target="_blank" class="glass p-3 rounded-lg flex items-center gap-3">
+            <img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt="instagram" class="w-8 h-8 rounded" />
+            <div>
+              <div class="font-semibold">Instagram</div>
+              <div class="small-muted text-sm">@olaoludotcom</div>
+            </div>
+          </a>
+
+          <a href="https://www.facebook.com/olaoludotcom/" target="_blank" class="glass p-3 rounded-lg flex items-center gap-3">
+            <img src="https://www.facebook.com/favicon.ico" alt="facebook" class="w-8 h-8 rounded" />
+            <div>
+              <div class="font-semibold">Facebook</div>
+              <div class="small-muted text-sm">facebook.com/olaoludotcom</div>
+            </div>
+          </a>
+
+          <a href="https://twitter.com/sofatoyedotcom" target="_blank" class="glass p-3 rounded-lg flex items-center gap-3">
+            <img src="https://abs.twimg.com/favicons/twitter.ico" alt="twitter" class="w-8 h-8 rounded" />
+            <div>
+              <div class="font-semibold">X / Twitter</div>
+              <div class="small-muted text-sm">@sofatoyedotcom</div>
+            </div>
+          </a>
+
+          <a href="https://www.youtube.com/channel/UC2d-P58PjuO9VaItFWY5BQQ" target="_blank" class="glass p-3 rounded-lg flex items-center gap-3">
+            <img src="https://www.youtube.com/s/desktop/6b7d6f9d/img/favicon_144.png" alt="youtube" class="w-8 h-8 rounded" />
+            <div>
+              <div class="font-semibold">YouTube — OLAOLUDOTCOM</div>
+              <div class="small-muted text-sm">Subscribe for videos & events</div>
+            </div>
+          </a>
+
+          <a href="https://www.youtube.com/oneminuteinspiration" target="_blank" class="glass p-3 rounded-lg flex items-center gap-3">
+            <div class="card-icon">▶</div>
+            <div>
+              <div class="font-semibold">One Minute Inspiration</div>
+              <div class="small-muted text-sm">Short uplifting videos</div>
+            </div>
+          </a>
+
+          <a href="https://www.youtube.com/channel/UCFQHvyKqIpR46Ojk3qCiwcA/videos" target="_blank" class="glass p-3 rounded-lg flex items-center gap-3">
+            <div class="card-icon">▶</div>
+            <div>
+              <div class="font-semibold">YouTube — Channel</div>
+              <div class="small-muted text-sm">Alternate channel</div>
+            </div>
+          </a>
+
+          <a href="https://www.youtube.com/@olaoludotcom-celestine/videos" target="_blank" class="glass p-3 rounded-lg flex items-center gap-3">
+            <div class="card-icon">▶</div>
+            <div>
+              <div class="font-semibold">YouTube — Celestine</div>
+              <div class="small-muted text-sm">Related uploads</div>
+            </div>
+          </a>
+
+          <a href="https://t.me/olaoludotcom" target="_blank" class="glass p-3 rounded-lg flex items-center gap-3">
+            <div class="card-icon">✈</div>
+            <div>
+              <div class="font-semibold">Telegram</div>
+              <div class="small-muted text-sm">t.me/olaoludotcom</div>
+            </div>
+          </a>
+
+          <a href="https://whatsapp.com/channel/0029VaYaGiqAzNbv2PS6ZN0r" target="_blank" class="glass p-3 rounded-lg flex items-center gap-3">
+            <div class="card-icon">💬</div>
+            <div>
+              <div class="font-semibold">WhatsApp Channel</div>
+              <div class="small-muted text-sm">Join updates</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Books & Publications -->
+      <div id="books" class="glass p-6 rounded-xl shadow">
+        <h3 class="font-extrabold text-xl">Books & Publications</h3>
+        <p class="small-muted mt-1">Selected books, journals and publications available across Amazon marketplaces.</p>
+        <div class="mt-4 space-y-2 small-muted text-sm">(Tap any title to open the product page)</div>
+        <ul class="mt-3 list-disc pl-5 pr-2 space-y-2">
+          <!-- A subset included — all provided Amazon links are listed for completeness -->
+          <li><a href="https://www.amazon.com/Golden-Wisdom-Nuggets-Fundamentals-Constant/dp/1453663207" target="_blank" class="font-semibold">Golden Wisdom Nuggets</a></li>
+          <li><a href="https://www.amazon.com/Golden-Rules-Get-Gold-Rule/dp/1461192404" target="_blank" class="font-semibold">Golden Rules Get Gold Rule</a></li>
+          <li><a href="https://www.amazon.com/Share-Your-Best-Thoughts-Workbook/dp/B097799F1J" target="_blank" class="font-semibold">Share Your Best Thoughts — Workbook</a></li>
+          <li><a href="https://www.amazon.ca/Golden-Quotes-Motivational-Inspirational-Encouraging/dp/1463609485" target="_blank" class="font-semibold">Golden Quotes — Canadian listing</a></li>
+          <li><a href="https://www.amazon.com/Share-Your-Best-Thoughts-Documenting/dp/1979403953" target="_blank" class="font-semibold">Share Your Best Thoughts — Documenting</a></li>
+          <li><a href="https://www.amazon.com/Overcome-Worries-Permanently-Forever-Starting/dp/1463656874" target="_blank" class="font-semibold">Overcome Worries Permanently</a></li>
+          <li><a href="https://www.amazon.com/Share-Your-Best-Thoughts-Documenting/dp/1979496528" target="_blank" class="font-semibold">Share Your Best Thoughts — Edition (US)</a></li>
+          <li><a href="https://www.amazon.com/-/es/Olakunle-Solomon-Fatoye/dp/B096TTV6SZ" target="_blank" class="font-semibold">Author page — Spanish listing</a></li>
+          <li><a href="https://www.amazon.co.uk/Olakunle-Solomon-Fatoye/e/B003XE7N14" target="_blank" class="font-semibold">Amazon UK — Author</a></li>
+          <li><a href="https://www.amazon.com/Golden-Wisdom-Nuggets-Fundamentals-Constant-ebook/dp/B077684M6K" target="_blank" class="font-semibold">Golden Wisdom (ebook)</a></li>
+          <li><a href="https://www.amazon.com/Golden-Rules-Get-Gold-Rule-ebook/dp/B077696LPY" target="_blank" class="font-semibold">Golden Rules (ebook)</a></li>
+          <li><a href="https://www.amazon.ca/Overcome-Worries-Permanently-Forever-Starting/dp/1463656874" target="_blank" class="font-semibold">Overcome Worries (Canada)</a></li>
+          <li><a href="https://www.amazon.com.mx/Share-Your-Best-Thoughts-Documenting/dp/1979811636" target="_blank" class="font-semibold">Share Your Best Thoughts (Mexico)</a></li>
+        </ul>
+        <div class="mt-4">
+          <a href="https://www.amazon.com/s?k=Olakunle+Solomon+Fatoye" target="_blank" class="inline-block px-4 py-2 rounded-full glass font-semibold">View more on Amazon</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hubs, Profiles & Bios -->
+    <section id="hubs" class="glass p-6 rounded-xl shadow">
+      <h3 class="font-extrabold text-xl">Web Hubs, Profiles & Link Pages</h3>
+      <p class="small-muted mt-1">Consolidated places where we keep biographies, link trees and micro-sites.</p>
+      <div class="mt-4 grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+        <a href="https://bio.site/olaoludotcom" target="_blank" class="glass p-3 rounded-lg">bio.site — olaoludotcom</a>
+        <a href="https://bio.site/olakunlesolomon" target="_blank" class="glass p-3 rounded-lg">bio.site — Olakunle Solomon</a>
+        <a href="https://bio.site/welcome" target="_blank" class="glass p-3 rounded-lg">bio.site — Welcome</a>
+        <a href="https://bio.site/limsar" target="_blank" class="glass p-3 rounded-lg">bio.site — Limsar</a>
+        <a href="https://bio.site/eternityahead" target="_blank" class="glass p-3 rounded-lg">bio.site — Eternity Ahead</a>
+        <a href="https://beacons.ai/olaoludotcom" target="_blank" class="glass p-3 rounded-lg">Beacons — Main</a>
+        <a href="https://website.beacons.ai/olaoludotcom/websites/live/d02a917b-32ee-423a-9b1e-e0884adae70e?=" target="_blank" class="glass p-3 rounded-lg">Beacons — Live (d02a9...)</a>
+        <a href="https://website.beacons.ai/olaoludotcom/websites/live/b0f5fe84-55f2-482f-803c-aff737fefb4c?=" target="_blank" class="glass p-3 rounded-lg">Beacons — Alternate (b0f5f...)</a>
+        <a href="https://beacons.ai/olaoludotcom/meetos" target="_blank" class="glass p-3 rounded-lg">Meetos (Beacons)</a>
+        <a href="https://olaoluolaolu.wordpress.com/" target="_blank" class="glass p-3 rounded-lg">WordPress — olaoluolaolu</a>
+        <a href="https://olaoludotcom.weebly.com/" target="_blank" class="glass p-3 rounded-lg">Weebly — olaoludotcom</a>
+        <a href="https://sofatoyedotcom.weebly.com/" target="_blank" class="glass p-3 rounded-lg">Weebly — sofatoyedotcom</a>
+        <a href="https://sites.google.com/olaolu.com/olaolu-dotcom/home?=" target="_blank" class="glass p-3 rounded-lg">Google Sites — Home</a>
+        <a href="https://sites.google.com/olaolu.com/olaolu-dotcom/contact-us" target="_blank" class="glass p-3 rounded-lg">Google Sites — Contact</a>
+      </div>
+    </section>
+
+    <!-- Contact & Info + Legal -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div id="contact" class="glass p-6 rounded-xl shadow">
+        <h3 class="font-extrabold text-xl">Contact & Info</h3>
+        <p class="small-muted mt-1">Ways to reach us, book time, or find deeper contact details.</p>
+        <ul class="mt-4 space-y-2 small-muted">
+          <li><a href="https://sites.google.com/olaolu.com/olaolu-dotcom/contact-us" target="_blank" class="font-semibold">Google Sites — Contact page</a></li>
+          <li><a href="https://app.acuityscheduling.com/schedule.php?owner=12499645" target="_blank" class="font-semibold">Schedule a meeting (Acuity)</a></li>
+          <li><a href="mailto:hello@olaolu.com" class="font-semibold">Email: hello@olaolu.com</a></li>
+          <li><a href="https://uk.linkedin.com/in/olakunlesolomon" target="_blank" class="font-semibold">LinkedIn — Olakunle Solomon</a></li>
+          <li><a href="https://uk.linkedin.com/company/olaoludotcom" target="_blank" class="font-semibold">LinkedIn — Company Page</a></li>
+        </ul>
+      </div>
+
+      <div id="legal" class="glass p-6 rounded-xl shadow">
+        <h3 class="font-extrabold text-xl">Legal & Policies</h3>
+        <p class="small-muted mt-1">Privacy, shop terms and other legal pages.</p>
+        <ul class="mt-4 space-y-2 small-muted">
+          <li><a href="https://olaoludotcom-shop.fourthwall.com/en-sek/pages/privacy-policy" target="_blank" class="font-semibold">Shop Privacy Policy</a></li>
+          <li><a href="https://olaoludotcom-shop.fourthwall.com/en-usd/" target="_blank" class="font-semibold">Official Shop (Terms & info)</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Extras: Media, Flickr, Amazon international links compacted -->
+    <section class="glass p-6 rounded-xl shadow">
+      <h3 class="font-extrabold text-xl">Extras & Media</h3>
+      <p class="small-muted mt-1">Other links, media archives and useful resources.</p>
+      <div class="mt-4 grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+        <a href="https://www.flickr.com/photos/154959611@N07/" target="_blank" class="glass p-3 rounded-lg">Flickr — Photos</a>
+        <a href="https://olaoluolaolu.wordpress.com/" target="_blank" class="glass p-3 rounded-lg">Blog — WordPress</a>
+        <a href="https://olaoludotcom.weebly.com/" target="_blank" class="glass p-3 rounded-lg">Weebly site</a>
+        <a href="https://www.amazon.co.uk/Olakunle-Solomon-Fatoye/e/B003XE7N14" target="_blank" class="glass p-3 rounded-lg">Amazon AU/UK/Intl — Author</a>
+        <a href="https://www.amazon.com/-/es/Olakunle-Solomon-Fatoye/dp/B096TTV6SZ" target="_blank" class="glass p-3 rounded-lg">Amazon — Spanish</a>
+        <a href="https://www.amazon.de/-/en/Olakunle-Solomon-Fatoye/dp/B003XF1H9C" target="_blank" class="glass p-3 rounded-lg">Amazon — Germany</a>
+      </div>
+    </section>
+
+    <footer class="text-center small-muted mt-2 mb-8">© 2025 OLAOLUDOTCOM • Built with joy • <a href="#" class="underline">Report a broken link</a></footer>
+  </main>
+
+  <script>
+    // Simple mobile menu
+    document.getElementById('menuBtn')?.addEventListener('click', () => {
+      const nav = document.createElement('div');
+      nav.className = 'fixed inset-0 bg-black/30 flex items-start justify-center p-6 z-50';
+      nav.innerHTML = `
+        <div class=\"glass rounded-lg p-6 w-full max-w-md\"> 
+          <h3 class=\"font-extrabold text-lg\">Menu</h3>
+          <ul class=\"mt-4 space-y-3\"> 
+            <li><a href=\"#about\" class=\"font-semibold\">About</a></li>
+            <li><a href=\"#shop\" class=\"font-semibold\">Shop</a></li>
+            <li><a href=\"#social\" class=\"font-semibold\">Social</a></li>
+            <li><a href=\"#books\" class=\"font-semibold\">Books</a></li>
+            <li><a href=\"#hubs\" class=\"font-semibold\">Hubs</a></li>
+            <li><button id=\"closeMenu\" class=\"mt-4 px-4 py-2 rounded-full bg-pink-100 font-bold\">Close</button></li>
+          </ul>
+        </div>`;
+      document.body.appendChild(nav);
+      document.getElementById('closeMenu')?.addEventListener('click', () => nav.remove());
+      nav.addEventListener('click', (e)=> { if(e.target===nav) nav.remove(); });
+    });
+
+    // Gentle entrance animations
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.glass').forEach((el,i)=>{ el.style.opacity=0; setTimeout(()=> el.style.opacity=1, 120*i); });
+    });
+  </script>
+</body>
+</html>
