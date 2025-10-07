@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Things OLAOLUDOTCOM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide-icons/dist/umd/lucide.js"></script>
+  <style>
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.7s ease-in-out;
+    }
+    [data-animate].active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .hero-bg {
+      background: linear-gradient(270deg, #f9a8d4, #fde68a, #93c5fd, #f9a8d4);
+      background-size: 600% 600%;
+      animation: gradientShift 20s ease infinite;
+      position: relative;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .icon-inline svg {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .icon-inline:hover svg {
+      transform: scale(1.2) rotate(5deg);
+      color: #ec4899;
+    }
+  </style>
+</head>
+<body class="bg-pink-50 text-gray-800">
+  <section class="relative hero-bg text-white py-28 shadow-lg overflow-hidden" data-animate>
+    <div class="max-w-4xl mx-auto text-center px-6 relative z-10">
+      <h1 class="text-5xl font-extrabold drop-shadow-lg">All Things OLAOLUDOTCOM</h1>
+      <p class="mt-4 text-lg text-white/90">Explore official links, merchandise, and social platforms of OLAOLUDOTCOM</p>
+      <a href="#about" class="mt-6 inline-block bg-white text-gray-900 px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition transform hover:-translate-y-1">Get Started</a>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-r from-pink-200 via-yellow-200 to-blue-200 text-gray-900 py-12 shadow-lg" data-animate>
+    <div class="max-w-3xl mx-auto text-center px-6">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Support Our Work ❤️</h2>
+      <p class="text-lg mb-6">Dear fans and supporters, your kind contributions help us continue creating and sharing more of what you love. Every bit of support makes a big difference!</p>
+      <a href="https://sweetite-unlimited.lovable.app/" target="_blank" class="inline-block bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-pink-100 transform hover:-translate-y-1 transition">Contribute Here</a>
+    </div>
+  </section>
+
+  <nav class="bg-gradient-to-r from-pink-400 via-yellow-300 to-blue-400 py-3 flex justify-center space-x-6 sticky top-0 z-50 shadow" data-animate>
+    <a href="#about" class="text-gray-900 hover:text-white font-semibold">About</a>
+    <a href="#shop" class="text-gray-900 hover:text-white font-semibold">Shop</a>
+    <a href="#social" class="text-gray-900 hover:text-white font-semibold">Social</a>
+    <a href="#contact" class="text-gray-900 hover:text-white font-semibold">Contact</a>
+    <a href="#legal" class="text-gray-900 hover:text-white font-semibold">Legal</a>
+    <a href="https://sweetite-unlimited.lovable.app/" target="_blank" class="ml-4 bg-white text-gray-900 font-bold px-4 py-2 rounded-full hover:bg-yellow-100 transition animate-pulse">💖 Support Us</a>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 py-10 grid gap-8">
+    <section id="about" class="bg-white p-6 rounded-2xl shadow-md" data-animate>
+      <h2 class="text-2xl font-bold mb-4 border-b pb-2 text-pink-600">About OLAOLUDOTCOM</h2>
+      <p>OLAOLUDOTCOM is a creative and inspirational entity with presence across multiple platforms, offering books, content, social engagement, and merchandise.</p>
+    </section>
+
+    <section id="shop" class="bg-white p-6 rounded-2xl shadow-md" data-animate>
+      <h2 class="text-2xl font-bold mb-4 border-b pb-2 text-yellow-600">Shop &amp; Books</h2>
+      <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <a href="https://olaoludotcom-shop.fourthwall.com/en-usd/" target="_blank" class="block p-4 bg-yellow-100 hover:bg-yellow-200 rounded-xl shadow transition transform hover:-translate-y-1 hover:shadow-lg icon-inline"><i data-lucide="shopping-bag"></i>Official Shop</a>
+        <a href="https://website.beacons.ai/olaoludotcom/websites/live/d02a917b-32ee-423a-9b1e-e0884adae70e?=" target="_blank" class="block p-4 bg-yellow-100 hover:bg-yellow-200 rounded-xl shadow transition transform hover:-translate-y-1 hover:shadow-lg icon-inline"><i data-lucide="link"></i>Beacons Storefront</a>
+        <a href="https://www.amazon.com/Olakunle-Solomon-Fatoye/e/B003XE7N14" target="_blank" class="block p-4 bg-yellow-100 hover:bg-yellow-200 rounded-xl shadow transition transform hover:-translate-y-1 hover:shadow-lg icon-inline"><i data-lucide="book"></i>Books by Olakunle Solomon Fatoye</a>
+      </div>
+    </section>
+
+    <section id="social" class="bg-white p-6 rounded-2xl shadow-md" data-animate>
+      <h2 class="text-2xl font-bold mb-4 border-b pb-2 text-blue-600">Social Media</h2>
+      <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+        <a href="https://www.instagram.com/olaoludotcom/" target="_blank" class="block p-4 bg-pink-100 hover:bg-pink-200 rounded-xl shadow icon-inline"><i data-lucide="instagram"></i>Instagram</a>
+        <a href="https://www.facebook.com/olaoludotcom/" target="_blank" class="block p-4 bg-blue-100 hover:bg-blue-200 rounded-xl shadow icon-inline"><i data-lucide="facebook"></i>Facebook</a>
+        <a href="https://twitter.com/sofatoyedotcom" target="_blank" class="block p-4 bg-blue-100 hover:bg-blue-200 rounded-xl shadow icon-inline"><i data-lucide="twitter"></i>Twitter</a>
+        <a href="https://www.youtube.com/@olaoludotcom-celestine/videos" target="_blank" class="block p-4 bg-red-100 hover:bg-red-200 rounded-xl shadow icon-inline"><i data-lucide="youtube"></i>YouTube</a>
+        <a href="https://t.me/olaoludotcom" target="_blank" class="block p-4 bg-blue-100 hover:bg-blue-200 rounded-xl shadow icon-inline"><i data-lucide="send"></i>Telegram</a>
+        <a href="https://whatsapp.com/channel/0029VaYaGiqAzNbv2PS6ZN0r" target="_blank" class="block p-4 bg-green-100 hover:bg-green-200 rounded-xl shadow icon-inline"><i data-lucide="message-circle"></i>WhatsApp Channel</a>
+        <a href="https://uk.linkedin.com/in/olaoludotcom" target="_blank" class="block p-4 bg-blue-100 hover:bg-blue-200 rounded-xl shadow icon-inline"><i data-lucide="linkedin"></i>LinkedIn</a>
+        <a href="https://flickr.com/photos/154959611@N07/" target="_blank" class="block p-4 bg-purple-100 hover:bg-purple-200 rounded-xl shadow icon-inline"><i data-lucide="camera"></i>Flickr</a>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-white p-6 rounded-2xl shadow-md" data-animate>
+      <h2 class="text-2xl font-bold mb-4 border-b pb-2 text-green-600">Contact &amp; Info</h2>
+      <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <a href="https://sites.google.com/olaolu.com/olaolu-dotcom/contact-us" target="_blank" class="block p-4 bg-green-100 hover:bg-green-200 rounded-xl shadow icon-inline"><i data-lucide="mail"></i>Google Contact Page</a>
+        <a href="https://app.acuityscheduling.com/schedule.php?owner=12499645" target="_blank" class="block p-4 bg-green-100 hover:bg-green-200 rounded-xl shadow icon-inline"><i data-lucide="calendar"></i>Book a Meeting</a>
+        <a href="https://bio.site/olaoludotcom" target="_blank" class="block p-4 bg-green-100 hover:bg-green-200 rounded-xl shadow icon-inline"><i data-lucide="user"></i>Bio Site</a>
+      </div>
+    </section>
+
+    <section id="legal" class="bg-white p-6 rounded-2xl shadow-md" data-animate>
+      <h2 class="text-2xl font-bold mb-4 border-b pb-2 text-red-600">Legal</h2>
+      <a href="https://olaoludotcom-shop.fourthwall.com/en-sek/pages/privacy-policy" target="_blank" class="block p-4 bg-red-100 hover:bg-red-200 rounded-xl shadow icon-inline"><i data-lucide="file-text"></i>Privacy Policy</a>
+    </section>
+  </main>
+
+  <footer class="bg-gradient-to-r from-blue-400 via-yellow-300 to-pink-400 text-gray-900 text-center py-6 mt-10 font-semibold" data-animate>
+    <p>&copy; 2025 OLAOLUDOTCOM. All Rights Reserved. Stay joyful and inspired!</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const animateElements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animateElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
