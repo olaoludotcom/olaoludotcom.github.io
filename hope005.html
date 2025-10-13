@@ -385,25 +385,27 @@
             color: var(--text-color);
             margin-bottom: 10px;
         }
+        /* --- ADJUSTMENT HERE: Smaller font for all step card paragraphs --- */
         .step-card p {
-            margin-bottom: 15px; /* Added general margin for consistency */
+            margin-bottom: 15px;
+            font-size: 1rem; /* Reduced from default for better fit */
         }
         .step-card p strong {
             color: var(--primary-color);
         }
-        /* NEW CLASS for the footnote text in step 2 */
         .step-card .tier-caption {
             margin-top: 15px;
             font-size: 0.95rem;
             color: #777;
             margin-bottom: 0;
         }
+        /* --- ADJUSTMENT HERE: Smaller font for the code box --- */
         .code-box {
             background-color: var(--secondary-color);
             color: var(--text-color);
             padding: 10px 20px;
             border-radius: 8px;
-            font-size: 1.5rem;
+            font-size: 1.3rem; /* Reduced from 1.5rem */
             font-weight: bold;
             margin: 15px auto 0;
             display: inline-block;
@@ -424,7 +426,7 @@
             border: 1px solid #ddd; /* Light border for definition */
             border-radius: 8px;
             overflow: hidden;
-            font-size: 0.95rem; /* Reduce font size slightly */
+            font-size: 0.95rem; /* This is already small and helps it fit */
         }
         .tier-item {
             display: flex;
