@@ -190,6 +190,22 @@
             margin: 0 auto 40px;
             font-size: 1.1rem;
         }
+        /* NEW STYLES FOR HALF-PAGE IMAGE WITH BOLD BORDER */
+        .ecosystem-visual {
+            max-width: 50%; /* Half the container width */
+            margin: 40px auto;
+            border: 5px solid #FFD740; /* Golden Yellow Border */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        .ecosystem-visual img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* END NEW STYLES */
         .roles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -227,19 +243,7 @@
         .role-card p strong {
             color: var(--primary-color);
         }
-        .image-gallery {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 40px;
-        }
-        .image-gallery img {
-            max-width: 100%;
-            height: auto;
-            max-height: 200px; /* Control image size for visual balance */
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
+
         
         /* --- Summary Document Section --- */
         .summary-document {
@@ -408,6 +412,11 @@
         }
 
         /* --- Responsive Adjustments --- */
+        @media (max-width: 900px) {
+            .ecosystem-visual {
+                max-width: 70%; /* Increase image size on smaller screens */
+            }
+        }
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -428,12 +437,8 @@
             .roles-grid {
                 grid-template-columns: 1fr;
             }
-            .image-gallery {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .image-gallery img {
-                max-height: 150px;
+            .ecosystem-visual {
+                max-width: 90%; /* Max width on small screens */
             }
             .final-cta h2 {
                 font-size: 2rem;
@@ -502,8 +507,8 @@
             <h2>Our Kind Ecosystem: How It Works Together</h2>
             <p>In this simple, three-part model, we all play a crucial and supportive role to ensure security, expertise, and shared success. This is how your growth is managed:</p>
 
-            <div class="image-gallery">
-                <img src="photo_2025-10-12_20-57-06.jpg" alt="A visual representing the NexusX Team's expertise." />
+            <div class="ecosystem-visual">
+                <img src="photo_2025-10-13_21-12-19.jpg" alt="A visual diagram representing the NexusX Team, NCC Platform, and Community roles in the ecosystem." />
             </div>
 
             <div class="roles-grid">
@@ -568,7 +573,7 @@
                 </div>
                 
                 <div class="step-card">
-                    <span>4</span>
+                    <span>4</SPAN>
                     <h3>Withdraw and Tell Others!</h3>
                     <p>The final step is the most joyful: when you've made enough, you simply withdraw your profits and then tell others about this wonderful, life-changing opportunity!</p>
                     <p>It's built to be a simple, repeatable process for ongoing success.</p>
