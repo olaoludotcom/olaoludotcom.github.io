@@ -181,6 +181,68 @@
         .feature-box p {
             font-size: 1.1rem;
         }
+        
+        /* --- Awards & Testimonials Section --- */
+        .awards {
+            padding: 60px 0; /* Remove horizontal padding for full-width image */
+            background-color: var(--white);
+            text-align: center;
+        }
+        .awards h2 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+        .awards > p {
+             font-size: 1.1rem;
+             padding: 0 20px;
+             margin-bottom: 30px;
+        }
+        .testimonial-card {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--light-bg);
+            border-radius: 15px;
+            box-shadow: var(--box-shadow);
+            border-left: 5px solid var(--secondary-color);
+            text-align: left;
+        }
+        .testimonial-card blockquote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+        .testimonial-card cite {
+            display: block;
+            font-weight: bold;
+            color: var(--dark-green);
+        }
+        
+        /* Video Container for Awards Section */
+        .awards-video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px; /* Keep padded */
+        }
+        .awards-video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 15px;
+            box-shadow: var(--box-shadow);
+            border: 5px solid var(--primary-color);
+        }
+        .awards-video-caption {
+            font-size: 1rem;
+            font-style: italic;
+            color: #777;
+            margin-top: 10px;
+        }
+
 
         /* --- Ecosystem Section Styles --- */
         .ecosystem {
@@ -226,15 +288,6 @@
             margin-bottom: 15px;
             position: relative;
             padding-bottom: 10px;
-        }
-        .role-card h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 3px;
-            width: 50px;
-            background-color: var(--secondary-color);
         }
         .role-card p strong {
             color: var(--primary-color);
@@ -412,8 +465,6 @@
             padding: 0 15px; /* Match universal padding */
         }
         
-        /* Old photo grid img styles are now handled by the universal selector */
-        
         /* --- Final CTA Section --- */
         .final-cta {
             background-color: var(--dark-green);
@@ -535,7 +586,44 @@
 
         </div>
     </section>
-
+    
+    <section class="awards">
+        <div class="content-container-padded">
+            <h2>Proof & Praise: Awards and Testimonials</h2>
+            <p>We don't just talk about success—we celebrate it! Our platform is trusted and our community is thriving. See what we're achieving and what our members are saying.</p>
+        </div>
+        
+        <div class="full-width-visual">
+            <img src="photo_2025-10-13_21-12-25.jpg" alt="Photo displaying awards and recognition." />
+        </div>
+        
+        <div class="awards-video-container">
+            <video controls poster="photo_2025-10-13_21-12-30.jpg">
+                <source src="video_2025-10-13_21-12-47.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="awards-video-caption">Celebrating a member's milestone achievement—a brand new luxury car!</div>
+        </div>
+        
+        <div class="full-width-visual">
+            <img src="photo_2025-10-13_21-12-30.jpg" alt="Testimonial photo of a member posing with their new car." />
+        </div>
+        
+         <div class="full-width-visual">
+            <img src="photo_2025-10-13_21-12-40.jpg" alt="Testimonial photo of a member receiving car keys." />
+        </div>
+        
+        <div class="content-container-padded">
+            <div class="testimonial-card">
+                <blockquote>"I was skeptical at first, but the simplicity of the system and the kindness of the team made all the difference. I'm now making steady returns and have peace of mind about my future!"</blockquote>
+                <cite>— Alice, Community Member, UK</cite>
+            </div>
+             <div class="testimonial-card">
+                <blockquote>"This isn't high-risk gambling; it's disciplined, copied trading. The platform is robust, the experts are top-tier, and the monthly income has been a stable blessing."</blockquote>
+                <cite>— David, Community Member, Canada</cite>
+            </div>
+        </div>
+    </section>
     <section class="ecosystem">
         <div class="content-container-padded">
             <h2>Our Kind Ecosystem: How It Works Together</h2>
@@ -697,6 +785,7 @@
             <img src="photo_2025-10-12_20-57-09.jpg" alt="Community member photo 16">
             <img src="photo_2025-10-12_20-57-08.jpg" alt="Community member photo 17">
             <img src="photo_2025-10-12_20-57-04.jpg" alt="Community member photo 18">
+            <img src="photo_2025-10-12_20-57-17.jpg" alt="Community member photo 19">
         </div>
     </section>
     
