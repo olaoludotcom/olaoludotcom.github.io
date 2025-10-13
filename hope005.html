@@ -385,8 +385,18 @@
             color: var(--text-color);
             margin-bottom: 10px;
         }
+        .step-card p {
+            margin-bottom: 15px; /* Added general margin for consistency */
+        }
         .step-card p strong {
             color: var(--primary-color);
+        }
+        /* NEW CLASS for the footnote text in step 2 */
+        .step-card .tier-caption {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #777;
+            margin-bottom: 0;
         }
         .code-box {
             background-color: var(--secondary-color);
@@ -660,7 +670,7 @@
     <section class="summary-document">
         <div class="container">
             <p>Ready for a deeper dive? Download our comprehensive PDF summary to see the full details of the NexusX system.</p>
-            <a href="uploaded:NexusX-PPT.pdf" class="cta-link" target="_blank">
+            <a href="https://olaoludotcom.github.io/NexusX-PPT.pdf" class="cta-link" target="_blank">
                 ⬇️ Download Full System Summary (PDF)
             </a>
         </div>
@@ -685,7 +695,7 @@
                 <div class="step-card">
                     <span>2</span>
                     <h3>Fund Your Future: Tiered Rewards</h3>
-                    <p style="margin-bottom: 20px; font-weight: 600;">Invest confidently and receive **instant bonuses** and excellent monthly income potential based on your deposit level:</p>
+                    <p>Invest confidently and receive **instant bonuses** and excellent monthly income potential based on your deposit level:</p>
                     
                     <div class="tier-item tier-header">
                         <strong class="deposit">Deposit</strong>
@@ -720,7 +730,7 @@
                             <span class="income">($1,500 - $1,800)</span>
                         </li>
                     </ul>
-                    <p style="margin-top: 15px; font-size: 0.95rem; color: #777;">*All amounts are in USD/USDT. Monthly income potential is an estimate based on historical performance.</p>
+                    <p class="tier-caption">*All amounts are in USD/USDT. Monthly income potential is an estimate based on historical performance.</p>
                     </div>
                 
                 <div class="step-card">
