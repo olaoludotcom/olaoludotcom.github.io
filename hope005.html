@@ -190,7 +190,7 @@
             margin: 0 auto 40px;
             font-size: 1.1rem;
         }
-        /* NEW STYLES FOR HALF-PAGE IMAGE WITH BOLD BORDER */
+        /* STYLES FOR HALF-PAGE IMAGE WITH BOLD BORDER */
         .ecosystem-visual {
             max-width: 50%; /* Half the container width */
             margin: 40px auto;
@@ -244,6 +244,37 @@
             color: var(--primary-color);
         }
 
+        /* --- System Breakdown Section (Updated for full-width) --- */
+        .system-breakdown {
+            padding-top: 60px; /* Keep vertical padding */
+            padding-bottom: 60px; /* Keep vertical padding */
+            padding-left: 0; /* Remove horizontal padding for full width images */
+            padding-right: 0; /* Remove horizontal padding for full width images */
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+        .system-breakdown h2 {
+            font-size: 2.5rem;
+            color: var(--dark-green);
+            margin-bottom: 30px;
+        }
+        /* New container for full width images */
+        .infographic-full-width {
+            width: 100%;
+            margin-top: 30px;
+            display: block;
+            padding: 0; /* Ensures no internal padding */
+        }
+        .infographic-full-width img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 40px; /* Separate the pictures */
+        }
+        /* Remove margin-bottom on the last image */
+        .infographic-full-width img:last-child {
+            margin-bottom: 0;
+        }
         
         /* --- Summary Document Section --- */
         .summary-document {
@@ -326,7 +357,7 @@
              margin-top: 15px;
         }
 
-        /* NEW STYLES FOR FUNDING TIERS (Step 2) */
+        /* STYLES FOR FUNDING TIERS (Step 2) */
         .tier-list {
             list-style: none;
             padding: 0;
@@ -596,6 +627,18 @@
         </div>
     </section>
 
+    <section class="system-breakdown">
+        <div class="container">
+            <h2>System Breakdown: Your Path to Profit</h2>
+            <p>These graphics simplify the core concepts of the Copy Trading System, showing you how security, strategy, and earnings work together for your success.</p>
+        </div>
+        
+        <div class="infographic-full-width">
+            <img src="photo_2025-10-13_21-13-14.jpg" alt="Infographic detailing the funds and security process." />
+            <img src="photo_2025-10-13_21-13-12.jpg" alt="Infographic explaining the copy trading mechanism." />
+            <img src="photo_2025-10-13_21-13-11.jpg" alt="Infographic illustrating the daily settlement and profit sharing process." />
+        </div>
+    </section>
     <section class="summary-document">
         <div class="container">
             <p>Ready for a deeper dive? Download our comprehensive PDF summary to see the full details of the NexusX system.</p>
@@ -649,8 +692,8 @@
                             <span class="income">($500 - $580)</span>
                         </li>
                         <li class="tier-item">
-                            <strong class="deposit">Deposit $2,000</strong>
-                            <strong class="bonus">+ $100 Bonus!</strong>
+                            <strong class="deposit">Deposit $2,000</strong
+                            ><strong class="bonus">+ $100 Bonus!</strong>
                             <span class="income">($1,000 - $1,200)</span>
                         </li>
                         <li class="tier-item" style="border-width: 3px; border-style: double; border-color: var(--secondary-color);">
@@ -669,7 +712,7 @@
                 </div>
                 
                 <div class="step-card">
-                    <span>4</SPAN>
+                    <span>4</span>
                     <h3>Withdraw and Tell Others!</h3>
                     <p>The final step is the most joyful: when you've made enough, you simply withdraw your profits and then tell others about this wonderful, life-changing opportunity!</p>
                     <p>It's built to be a simple, repeatable process for ongoing success.</p>
