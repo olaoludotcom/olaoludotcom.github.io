@@ -401,11 +401,89 @@
         .link-box {
              margin-top: 15px;
         }
+
+        /* --- Roadmap Tier List Moderation --- */
+        .tier-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+            /* Constrain the list width to make it look contained */
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #ddd; /* Light border for definition */
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 0.95rem; /* Reduce font size slightly */
+        }
+        .tier-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 15px; /* Reduced padding */
+            border-bottom: 1px solid #eee;
+            text-align: left;
+            background-color: var(--white);
+            line-height: 1.2;
+        }
+        .tier-item:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+        .tier-item:last-child {
+            border-bottom: none;
+        }
+        .tier-item strong, .tier-item span {
+            flex: 1; /* Distribute space evenly initially */
+            text-align: left;
+            font-weight: normal;
+        }
+        .tier-item .deposit {
+            flex: 1.3;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .tier-item .bonus {
+            flex: 1.5; /* Give bonus slightly more space */
+            text-align: center;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        .tier-item .income {
+            flex: 1.5; /* Give income the most space, align right */
+            text-align: right;
+            color: var(--dark-green);
+            font-weight: bold;
+        }
+        /* Style the header to use the new flex layout */
+        .tier-item.tier-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 8px 15px;
+            border-bottom: 2px solid var(--secondary-color);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+        }
+        .tier-item.tier-header strong, .tier-item.tier-header span {
+            color: var(--white) !important;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .tier-item.tier-header .income {
+             text-align: right;
+        }
+        /* Specific style for the highlighted tier */
+        .tier-item.highlight {
+            border-width: 2px !important;
+            border-style: double !important;
+            border-color: var(--secondary-color) !important;
+            background-color: #FFFBE6; /* Light yellow background */
+        }
         
         /* --- Photo Grid Section (Now Contained) --- */
         .photo-section {
             padding: 80px 0; /* Keeps the background full width */
-            background-color: var(--white);
+            background-color: var(--light-bg);
             text-align: center;
         }
         .photo-section h2 {
@@ -582,7 +660,7 @@
     <section class="summary-document">
         <div class="container">
             <p>Ready for a deeper dive? Download our comprehensive PDF summary to see the full details of the NexusX system.</p>
-            <a href="uploaded:NexusX-PPT.pdf" class="cta-link" download="NexusX-Summary.pdf">
+            <a href="uploaded:NexusX-PPT.pdf" class="cta-link" target="_blank">
                 ⬇️ Download Full System Summary (PDF)
             </a>
         </div>
@@ -609,41 +687,41 @@
                     <h3>Fund Your Future: Tiered Rewards</h3>
                     <p style="margin-bottom: 20px; font-weight: 600;">Invest confidently and receive **instant bonuses** and excellent monthly income potential based on your deposit level:</p>
                     
-                    <div class="tier-item tier-header" style="text-transform: uppercase;">
-                        <strong class="deposit" style="color: var(--primary-color); text-decoration: underline;">Deposit</strong>
-                        <strong class="bonus" style="color: var(--primary-color); text-decoration: underline;">Bonus</strong>
-                        <span class="income" style="color: var(--primary-color); text-decoration: underline; text-align: right;">Monthly Income</span>
+                    <div class="tier-item tier-header">
+                        <strong class="deposit">Deposit</strong>
+                        <strong class="bonus">Bonus</strong>
+                        <span class="income">Monthly Income</span>
                     </div>
 
                     <ul class="tier-list">
                         <li class="tier-item">
-                            <strong class="deposit">Deposit $300</strong>
-                            <strong class="bonus">+ $15 Bonus!</strong>
+                            <strong class="deposit">$300</strong>
+                            <strong class="bonus">+ $15!</strong>
                             <span class="income">($150 - $180)</span>
                         </li>
                         <li class="tier-item">
-                            <strong class="deposit">Deposit $500</strong>
-                            <strong class="bonus">+ $25 Bonus!</strong>
+                            <strong class="deposit">$500</strong>
+                            <strong class="bonus">+ $25!</strong>
                             <span class="income">($250 - $280)</span>
                         </li>
                         <li class="tier-item">
-                            <strong class="deposit">Deposit $1,000</strong>
-                            <strong class="bonus">+ $50 Bonus!</strong>
+                            <strong class="deposit">$1,000</strong>
+                            <strong class="bonus">+ $50!</strong>
                             <span class="income">($500 - $580)</span>
                         </li>
                         <li class="tier-item">
-                            <strong class="deposit">Deposit $2,000</strong
-                            ><strong class="bonus">+ $100 Bonus!</strong>
+                            <strong class="deposit">$2,000</strong
+                            ><strong class="bonus">+ $100!</strong>
                             <span class="income">($1,000 - $1,200)</span>
                         </li>
-                        <li class="tier-item" style="border-width: 3px; border-style: double; border-color: var(--secondary-color);">
-                            <strong class="deposit">Deposit $3,000</strong>
-                            <strong class="bonus">+ $150 Bonus!</strong>
+                        <li class="tier-item highlight">
+                            <strong class="deposit">$3,000</strong>
+                            <strong class="bonus">+ $150!</strong>
                             <span class="income">($1,500 - $1,800)</span>
                         </li>
                     </ul>
                     <p style="margin-top: 15px; font-size: 0.95rem; color: #777;">*All amounts are in USD/USDT. Monthly income potential is an estimate based on historical performance.</p>
-                </div>
+                    </div>
                 
                 <div class="step-card">
                     <span>3</span>
