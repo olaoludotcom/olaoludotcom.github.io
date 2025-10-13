@@ -32,19 +32,11 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1100px; /* Uniform maximum width */
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 20px; /* Uniform horizontal padding */
         }
         
-        /* Apply padding to the main container when needed, or 0 if full-width elements are inside */
-        .content-container-padded {
-            padding-left: 20px;
-            padding-right: 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
         /* --- Buttons & Links --- */
         .cta-button {
             display: inline-block;
@@ -184,7 +176,7 @@
         
         /* --- Awards & Testimonials Section --- */
         .awards {
-            padding: 60px 0; /* Remove horizontal padding for full-width image */
+            padding: 60px 0; /* Keeps the background full width */
             background-color: var(--white);
             text-align: center;
         }
@@ -192,11 +184,9 @@
             font-size: 2.8rem;
             color: var(--primary-color);
             margin-bottom: 20px;
-            padding: 0 20px;
         }
         .awards > p {
              font-size: 1.1rem;
-             padding: 0 20px;
              margin-bottom: 30px;
         }
         .testimonial-card {
@@ -221,12 +211,11 @@
             color: var(--dark-green);
         }
         
-        /* Video Container for Awards Section */
+        /* Video Container for Awards Section (Now Contained) */
         .awards-video-container {
-            width: 100%;
-            max-width: 800px;
+            max-width: 1100px; /* Constrain to main content width */
             margin: 40px auto;
-            padding: 0 20px; /* Keep padded */
+            padding: 0 20px; /* Add the side padding */
         }
         .awards-video-container video {
             width: 100%;
@@ -246,7 +235,7 @@
 
         /* --- Ecosystem Section Styles --- */
         .ecosystem {
-            padding: 80px 0; /* Removed horizontal padding */
+            padding: 80px 0; /* Keeps the background full width */
             background-color: var(--white);
             text-align: center;
         }
@@ -259,16 +248,14 @@
             max-width: 800px;
             margin: 0 auto 40px;
             font-size: 1.1rem;
-            padding: 0 20px; /* Keep text padded */
         }
         
-        /* Styles for the Roles Grid (Kept padded) */
+        /* Styles for the Roles Grid */
         .roles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
-            padding: 0 20px; /* Keep roles grid padded */
         }
         .role-card {
             background-color: var(--light-bg);
@@ -293,12 +280,15 @@
             color: var(--primary-color);
         }
         
-        /* --- Universal Full-Width Image Styling --- */
-        .full-width-visual {
+        /* --- Universal Visual Containers (Now Contained) --- */
+        .full-width-visual,
+        .infographic-full-width,
+        .photo-grid {
+            max-width: 1100px; /* Constrain to main content width */
+            margin: 40px auto; /* Vertical spacing and centering */
+            padding: 0 20px; /* Add the side padding for content alignment */
             width: 100%;
             display: block;
-            margin: 40px auto;
-            padding: 0 15px; /* Padding for the screen edge, so border doesn't touch */
         }
 
         .full-width-visual img, 
@@ -307,11 +297,11 @@
             width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto 30px; /* Standalone spacing */
+            margin: 0 auto 30px; /* Spacing between stacked visuals */
             /* UNIVERSAL BORDER STYLE */
             border: 8px solid var(--secondary-color); 
             border-radius: 15px; 
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow for impact */
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3); 
         }
         /* Remove margin from last element in groups */
         .infographic-full-width img:last-child,
@@ -323,8 +313,6 @@
         .system-breakdown {
             padding-top: 60px;
             padding-bottom: 60px;
-            padding-left: 0; 
-            padding-right: 0; 
             background-color: var(--light-bg);
             text-align: center;
         }
@@ -332,13 +320,6 @@
             font-size: 2.5rem;
             color: var(--dark-green);
             margin-bottom: 30px;
-        }
-        /* New container for full width images */
-        .infographic-full-width {
-            width: 100%;
-            margin-top: 30px;
-            display: block;
-            padding: 0 15px; /* Match universal padding */
         }
         
         /* --- Summary Document Section --- */
@@ -421,9 +402,9 @@
              margin-top: 15px;
         }
         
-        /* --- Photo Grid Section (Now Stacked Full-Width) --- */
+        /* --- Photo Grid Section (Now Contained) --- */
         .photo-section {
-            padding: 80px 0; /* Removed horizontal padding */
+            padding: 80px 0; /* Keeps the background full width */
             background-color: var(--white);
             text-align: center;
         }
@@ -432,37 +413,10 @@
             color: var(--dark-green);
             margin-bottom: 40px;
             font-weight: bold;
-            padding: 0 20px; /* Keep text padded */
         }
         .photo-section p {
-            padding: 0 20px; /* Keep text padded */
-        }
-        .video-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto 40px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            padding: 0 20px; /* Keep video padded */
-        }
-        .video-container video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .video-caption {
+            margin-bottom: 40px;
             font-size: 1.1rem;
-            font-style: italic;
-            color: var(--text-color);
-            margin-top: 15px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        .photo-grid {
-            /* Changed from grid to block for full-width stacking */
-            display: block;
-            padding: 0 15px; /* Match universal padding */
         }
         
         /* --- Final CTA Section --- */
@@ -522,13 +476,6 @@
                 font-size: 2rem;
             }
         }
-        @media (max-width: 500px) {
-            .full-width-visual,
-            .infographic-full-width,
-            .photo-grid {
-                 padding: 0 5px; /* Reduce padding on smallest screens */
-            }
-        }
     </style>
 </head>
 <body>
@@ -586,46 +533,9 @@
 
         </div>
     </section>
-    
-    <section class="awards">
-        <div class="content-container-padded">
-            <h2>Proof & Praise: Awards and Testimonials</h2>
-            <p>We don't just talk about success—we celebrate it! Our platform is trusted and our community is thriving. See what we're achieving and what our members are saying.</p>
-        </div>
-        
-        <div class="full-width-visual">
-            <img src="photo_2025-10-13_21-12-25.jpg" alt="Photo displaying awards and recognition." />
-        </div>
-        
-        <div class="awards-video-container">
-            <video controls poster="photo_2025-10-13_21-12-30.jpg">
-                <source src="video_2025-10-13_21-12-47.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="awards-video-caption">Celebrating a member's milestone achievement—a brand new luxury car!</div>
-        </div>
-        
-        <div class="full-width-visual">
-            <img src="photo_2025-10-13_21-12-30.jpg" alt="Testimonial photo of a member posing with their new car." />
-        </div>
-        
-         <div class="full-width-visual">
-            <img src="photo_2025-10-13_21-12-40.jpg" alt="Testimonial photo of a member receiving car keys." />
-        </div>
-        
-        <div class="content-container-padded">
-            <div class="testimonial-card">
-                <blockquote>"I was skeptical at first, but the simplicity of the system and the kindness of the team made all the difference. I'm now making steady returns and have peace of mind about my future!"</blockquote>
-                <cite>— Alice, Community Member, UK</cite>
-            </div>
-             <div class="testimonial-card">
-                <blockquote>"This isn't high-risk gambling; it's disciplined, copied trading. The platform is robust, the experts are top-tier, and the monthly income has been a stable blessing."</blockquote>
-                <cite>— David, Community Member, Canada</cite>
-            </div>
-        </div>
-    </section>
+
     <section class="ecosystem">
-        <div class="content-container-padded">
+        <div class="container">
             <h2>Our Kind Ecosystem: How It Works Together</h2>
             <p>In this simple, three-part model, we all play a crucial and supportive role to ensure security, expertise, and shared success. This is how your growth is managed:</p>
         </div>
@@ -634,7 +544,7 @@
             <img src="photo_2025-10-13_21-12-19.jpg" alt="A visual diagram representing the NexusX Team, NCC Platform, and Community roles in the ecosystem." />
         </div>
 
-        <div class="content-container-padded">
+        <div class="container">
             <div class="roles-grid">
                 
                 <div class="role-card">
@@ -657,7 +567,7 @@
     </section>
 
     <section class="system-breakdown">
-        <div class="container" style="padding: 0 20px;">
+        <div class="container">
             <h2>System Breakdown: Your Path to Profit</h2>
             <p>These graphics simplify the core concepts of the Copy Trading System, showing you how security, strategy, and earnings work together for your success.</p>
         </div>
@@ -668,6 +578,7 @@
             <img src="photo_2025-10-13_21-13-11.jpg" alt="Infographic illustrating the daily settlement and profit sharing process." />
         </div>
     </section>
+
     <section class="summary-document">
         <div class="container">
             <p>Ready for a deeper dive? Download our comprehensive PDF summary to see the full details of the NexusX system.</p>
@@ -753,39 +664,64 @@
     </section>
 
     <section class="photo-section">
-        <div class="container" style="padding: 0 20px;">
+        <div class="container">
             <h2>Our Joyful Community in Action</h2>
-            <p style="margin-bottom: 40px; font-size: 1.1rem;">Get a glimpse of the supportive and successful team you'll be joining!</p>
-
-            <div class="video-container">
-                <video controls poster="photo_2025-10-12_20-57-06.jpg">
-                    <source src="uploaded:video_2025-10-12_20-57-19.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-caption">A member's thank you video celebrating their success with the NexusX community!</div>
-            </div>
+            <p>Here is a glimpse of the supportive and successful team you'll be joining, celebrating their shared victories.</p>
         </div>
         
         <div class="photo-grid">
-            <img src="photo_2025-10-12_20-57-30.jpg" alt="Community member photo 1">
-            <img src="photo_2025-10-12_20-57-29.jpg" alt="Community member photo 2">
-            <img src="photo_2025-10-12_20-57-28.jpg" alt="Community member photo 3">
-            <img src="photo_2025-10-12_20-57-27.jpg" alt="Community member photo 4">
-            <img src="photo_2025-10-12_20-57-25.jpg" alt="Community member photo 5">
-            <img src="photo_2025-10-12_20-57-23.jpg" alt="Community member photo 6">
-            <img src="photo_2025-10-12_20-57-22.jpg" alt="Community member photo 7">
-            <img src="photo_2025-10-12_20-57-21.jpg" alt="Community member photo 8">
-            <img src="photo_2025-10-12_20-57-20.jpg" alt="Community member photo 9">
-            <img src="photo_2025-10-12_20-57-16.jpg" alt="Community member photo 10">
-            <img src="photo_2025-10-12_20-57-15.jpg" alt="Community member photo 11">
-            <img src="photo_2025-10-12_20-57-14.jpg" alt="Community member photo 12">
-            <img src="photo_2025-10-12_20-57-12.jpg" alt="Community member photo 13">
-            <img src="photo_2025-10-12_20-57-11.jpg" alt="Community member photo 14">
-            <img src="photo_2025-10-12_20-57-10.jpg" alt="Community member photo 15">
-            <img src="photo_2025-10-12_20-57-09.jpg" alt="Community member photo 16">
-            <img src="photo_2025-10-12_20-57-08.jpg" alt="Community member photo 17">
-            <img src="photo_2025-10-12_20-57-04.jpg" alt="Community member photo 18">
-            <img src="photo_2025-10-12_20-57-17.jpg" alt="Community member photo 19">
+            <img src="photo_2025-10-13_21-13-07.jpg" alt="Community member photo 1">
+            <img src="photo_2025-10-13_21-13-03.jpg" alt="Community member photo 2">
+            <img src="photo_2025-10-13_21-13-01.jpg" alt="Community member photo 3">
+            <img src="photo_2025-10-13_21-13-00.jpg" alt="Community member photo 4">
+            <img src="photo_2025-10-13_21-12-58.jpg" alt="Community member photo 5">
+            <img src="photo_2025-10-13_21-12-56.jpg" alt="Community member photo 6">
+            <img src="photo_2025-10-13_21-12-54.jpg" alt="Community member photo 7">
+            <img src="photo_2025-10-13_21-12-52.jpg" alt="Community member photo 8">
+            <img src="photo_2025-10-13_21-12-49.jpg" alt="Community member photo 9">
+            <img src="photo_2025-10-13_21-12-42.jpg" alt="Community member photo 10">
+            <img src="photo_2025-10-13_21-12-35.jpg" alt="Community member photo 11">
+            <img src="photo_2025-10-13_21-12-27.jpg" alt="Community member photo 12">
+            <img src="photo_2025-10-13_21-12-26.jpg" alt="Community member photo 13">
+            <img src="photo_2025-10-13_21-12-24.jpg" alt="Community member photo 14">
+        </div>
+    </section>
+    
+    <section class="awards">
+        <div class="container">
+            <h2>Proof & Praise: Awards and Testimonials</h2>
+            <p>We don't just talk about success—we celebrate it! Our platform is trusted and our community is thriving. See what we're achieving and what our members are saying.</p>
+        </div>
+        
+        <div class="full-width-visual">
+            <img src="photo_2025-10-13_21-12-25.jpg" alt="Photo displaying awards and recognition." />
+        </div>
+        
+        <div class="awards-video-container">
+            <video controls poster="photo_2025-10-13_21-12-30.jpg">
+                <source src="video_2025-10-13_21-12-47.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="awards-video-caption">Celebrating a member's milestone achievement—a brand new luxury car!</div>
+        </div>
+        
+        <div class="full-width-visual">
+            <img src="photo_2025-10-13_21-12-30.jpg" alt="Testimonial photo of a member posing with their new car." />
+        </div>
+        
+         <div class="full-width-visual">
+            <img src="photo_2025-10-13_21-12-40.jpg" alt="Testimonial photo of a member receiving car keys." />
+        </div>
+        
+        <div class="container">
+            <div class="testimonial-card">
+                <blockquote>"I was skeptical at first, but the simplicity of the system and the kindness of the team made all the difference. I'm now making steady returns and have peace of mind about my future!"</blockquote>
+                <cite>— Alice, Community Member, UK</cite>
+            </div>
+             <div class="testimonial-card">
+                <blockquote>"This isn't high-risk gambling; it's disciplined, copied trading. The platform is robust, the experts are top-tier, and the monthly income has been a stable blessing."</blockquote>
+                <cite>— David, Community Member, Canada</cite>
+            </div>
         </div>
     </section>
     
