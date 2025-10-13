@@ -385,27 +385,28 @@
             color: var(--text-color);
             margin-bottom: 10px;
         }
-        /* --- ADJUSTMENT HERE: Smaller font for all step card paragraphs --- */
+        /* Consistent font size for all step card paragraphs */
         .step-card p {
             margin-bottom: 15px;
-            font-size: 1rem; /* Reduced from default for better fit */
+            font-size: 1rem;
         }
         .step-card p strong {
             color: var(--primary-color);
         }
+        /* Footnote text now uses the consistent 1rem size */
         .step-card .tier-caption {
             margin-top: 15px;
-            font-size: 0.95rem;
+            font-size: 1rem; /* Uniform size */
             color: #777;
             margin-bottom: 0;
         }
-        /* --- ADJUSTMENT HERE: Smaller font for the code box --- */
+        /* Adjusted font size for the code box */
         .code-box {
             background-color: var(--secondary-color);
             color: var(--text-color);
             padding: 10px 20px;
             border-radius: 8px;
-            font-size: 1.3rem; /* Reduced from 1.5rem */
+            font-size: 1.3rem;
             font-weight: bold;
             margin: 15px auto 0;
             display: inline-block;
@@ -414,24 +415,23 @@
              margin-top: 15px;
         }
 
-        /* --- Roadmap Tier List Moderation --- */
+        /* --- Roadmap Tier List Moderation (Set to 1rem) --- */
         .tier-list {
             list-style: none;
             padding: 0;
             margin: 15px 0 0 0;
-            /* Constrain the list width to make it look contained */
             max-width: 350px;
             margin-left: auto;
             margin-right: auto;
-            border: 1px solid #ddd; /* Light border for definition */
+            border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
-            font-size: 0.95rem; /* This is already small and helps it fit */
+            font-size: 1rem; /* Uniform size */
         }
         .tier-item {
             display: flex;
             justify-content: space-between;
-            padding: 8px 15px; /* Reduced padding */
+            padding: 8px 15px;
             border-bottom: 1px solid #eee;
             text-align: left;
             background-color: var(--white);
@@ -444,7 +444,7 @@
             border-bottom: none;
         }
         .tier-item strong, .tier-item span {
-            flex: 1; /* Distribute space evenly initially */
+            flex: 1;
             text-align: left;
             font-weight: normal;
         }
@@ -454,23 +454,23 @@
             color: var(--primary-color);
         }
         .tier-item .bonus {
-            flex: 1.5; /* Give bonus slightly more space */
+            flex: 1.5;
             text-align: center;
             font-weight: bold;
             color: var(--secondary-color);
         }
         .tier-item .income {
-            flex: 1.5; /* Give income the most space, align right */
+            flex: 1.5;
             text-align: right;
             color: var(--dark-green);
             font-weight: bold;
         }
-        /* Style the header to use the new flex layout */
+        /* Header text now uses the consistent 1rem size */
         .tier-item.tier-header {
             background-color: var(--primary-color);
             color: var(--white);
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 1rem; /* Uniform size */
             padding: 8px 15px;
             border-bottom: 2px solid var(--secondary-color);
             text-shadow: 0 1px 2px rgba(0,0,0,0.1);
