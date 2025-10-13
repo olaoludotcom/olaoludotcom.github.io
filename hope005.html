@@ -8,7 +8,7 @@
         /* --- General Styles for a Friendly, Joyful Look --- */
         :root {
             --primary-color: #4CAF50; /* Joyful Green */
-            --secondary-color: #FFC107; /* Optimistic Yellow */
+            --secondary-color: #FFC107; /* Optimistic Yellow / Golden Yellow */
             --text-color: #333;
             --light-bg: #F9FFF5; /* Very Light Green/Off-White */
             --white: #ffffff;
@@ -35,6 +35,14 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+        
+        /* Apply padding to the main container when needed, or 0 if full-width elements are inside */
+        .content-container-padded {
+            padding-left: 20px;
+            padding-right: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         /* --- Buttons & Links --- */
@@ -176,7 +184,7 @@
 
         /* --- Ecosystem Section Styles --- */
         .ecosystem {
-            padding: 80px 20px;
+            padding: 80px 0; /* Removed horizontal padding */
             background-color: var(--white);
             text-align: center;
         }
@@ -189,28 +197,16 @@
             max-width: 800px;
             margin: 0 auto 40px;
             font-size: 1.1rem;
+            padding: 0 20px; /* Keep text padded */
         }
-        /* STYLES FOR HALF-PAGE IMAGE WITH BOLD BORDER */
-        .ecosystem-visual {
-            max-width: 50%; /* Half the container width */
-            margin: 40px auto;
-            border: 5px solid #FFD740; /* Golden Yellow Border */
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            display: block;
-        }
-        .ecosystem-visual img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        /* END NEW STYLES */
+        
+        /* Styles for the Roles Grid (Kept padded) */
         .roles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
+            padding: 0 20px; /* Keep roles grid padded */
         }
         .role-card {
             background-color: var(--light-bg);
@@ -243,13 +239,39 @@
         .role-card p strong {
             color: var(--primary-color);
         }
+        
+        /* --- Universal Full-Width Image Styling --- */
+        .full-width-visual {
+            width: 100%;
+            display: block;
+            margin: 40px auto;
+            padding: 0 15px; /* Padding for the screen edge, so border doesn't touch */
+        }
 
-        /* --- System Breakdown Section (Updated for full-width) --- */
+        .full-width-visual img, 
+        .infographic-full-width img,
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 30px; /* Standalone spacing */
+            /* UNIVERSAL BORDER STYLE */
+            border: 8px solid var(--secondary-color); 
+            border-radius: 15px; 
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow for impact */
+        }
+        /* Remove margin from last element in groups */
+        .infographic-full-width img:last-child,
+        .photo-grid img:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* --- System Breakdown Section --- */
         .system-breakdown {
-            padding-top: 60px; /* Keep vertical padding */
-            padding-bottom: 60px; /* Keep vertical padding */
-            padding-left: 0; /* Remove horizontal padding for full width images */
-            padding-right: 0; /* Remove horizontal padding for full width images */
+            padding-top: 60px;
+            padding-bottom: 60px;
+            padding-left: 0; 
+            padding-right: 0; 
             background-color: var(--light-bg);
             text-align: center;
         }
@@ -263,17 +285,7 @@
             width: 100%;
             margin-top: 30px;
             display: block;
-            padding: 0; /* Ensures no internal padding */
-        }
-        .infographic-full-width img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 40px; /* Separate the pictures */
-        }
-        /* Remove margin-bottom on the last image */
-        .infographic-full-width img:last-child {
-            margin-bottom: 0;
+            padding: 0 15px; /* Match universal padding */
         }
         
         /* --- Summary Document Section --- */
@@ -302,7 +314,6 @@
         .summary-document .cta-link:hover {
             background-color: var(--dark-green);
         }
-
 
         /* --- Roadmap Section --- */
         .roadmap {
@@ -356,60 +367,10 @@
         .link-box {
              margin-top: 15px;
         }
-
-        /* STYLES FOR FUNDING TIERS (Step 2) */
-        .tier-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-            text-align: center; 
-        }
-        .tier-item {
-            background-color: var(--white);
-            padding: 12px 15px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            border: 1px solid var(--primary-color);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            font-size: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap; 
-        }
-        .tier-item strong.deposit {
-            color: var(--dark-green);
-            font-size: 1.1rem;
-            font-weight: 900;
-            width: 30%; 
-            text-align: left;
-        }
-        .tier-item strong.bonus {
-            color: var(--secondary-color);
-            font-size: 1.1rem;
-            font-weight: 900;
-            width: 30%;
-            text-align: center;
-        }
-        .tier-item span.income {
-            color: var(--text-color);
-            font-size: 1rem;
-            width: 40%;
-            text-align: right;
-            font-weight: 600;
-        }
-        .tier-header {
-             font-weight: bold; 
-             background-color: var(--light-bg); 
-             border: none; 
-             box-shadow: none;
-             margin-bottom: 5px;
-        }
-        /* END NEW STYLES */
         
-        /* --- Photo Grid Section --- */
+        /* --- Photo Grid Section (Now Stacked Full-Width) --- */
         .photo-section {
-            padding: 80px 20px;
+            padding: 80px 0; /* Removed horizontal padding */
             background-color: var(--white);
             text-align: center;
         }
@@ -418,14 +379,19 @@
             color: var(--dark-green);
             margin-bottom: 40px;
             font-weight: bold;
+            padding: 0 20px; /* Keep text padded */
+        }
+        .photo-section p {
+            padding: 0 20px; /* Keep text padded */
         }
         .video-container {
             width: 100%;
-            max-width: 600px; /* Constrain video size */
+            max-width: 600px;
             margin: 0 auto 40px;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: var(--box-shadow);
+            padding: 0 20px; /* Keep video padded */
         }
         .video-container video {
             width: 100%;
@@ -441,25 +407,13 @@
             font-weight: 600;
         }
         .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
+            /* Changed from grid to block for full-width stacking */
+            display: block;
+            padding: 0 15px; /* Match universal padding */
         }
-        .photo-grid img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            transition: transform 0.3s ease;
-            max-width: 100%; 
-            height: auto;
-            object-fit: cover;
-            aspect-ratio: 1 / 1;
-        }
-        .photo-grid img:hover {
-            transform: scale(1.02);
-        }
-
+        
+        /* Old photo grid img styles are now handled by the universal selector */
+        
         /* --- Final CTA Section --- */
         .final-cta {
             background-color: var(--dark-green);
@@ -493,11 +447,6 @@
         }
 
         /* --- Responsive Adjustments --- */
-        @media (max-width: 900px) {
-            .ecosystem-visual {
-                max-width: 70%; /* Increase image size on smaller screens */
-            }
-        }
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -518,26 +467,16 @@
             .roles-grid {
                 grid-template-columns: 1fr;
             }
-            .ecosystem-visual {
-                max-width: 90%; /* Max width on small screens */
-            }
             .final-cta h2 {
                 font-size: 2rem;
             }
         }
         @media (max-width: 500px) {
-            .tier-item {
-                flex-direction: column;
-                text-align: center;
+            .full-width-visual,
+            .infographic-full-width,
+            .photo-grid {
+                 padding: 0 5px; /* Reduce padding on smallest screens */
             }
-            .tier-item strong.deposit,
-            .tier-item strong.bonus,
-            .tier-item span.income {
-                width: 100%;
-                margin-bottom: 5px;
-            }
-            .tier-item strong.deposit { text-align: center; }
-            .tier-item span.income { text-align: center; }
         }
     </style>
 </head>
@@ -598,14 +537,16 @@
     </section>
 
     <section class="ecosystem">
-        <div class="container">
+        <div class="content-container-padded">
             <h2>Our Kind Ecosystem: How It Works Together</h2>
             <p>In this simple, three-part model, we all play a crucial and supportive role to ensure security, expertise, and shared success. This is how your growth is managed:</p>
+        </div>
+        
+        <div class="full-width-visual">
+            <img src="photo_2025-10-13_21-12-19.jpg" alt="A visual diagram representing the NexusX Team, NCC Platform, and Community roles in the ecosystem." />
+        </div>
 
-            <div class="ecosystem-visual">
-                <img src="photo_2025-10-13_21-12-19.jpg" alt="A visual diagram representing the NexusX Team, NCC Platform, and Community roles in the ecosystem." />
-            </div>
-
+        <div class="content-container-padded">
             <div class="roles-grid">
                 
                 <div class="role-card">
@@ -628,7 +569,7 @@
     </section>
 
     <section class="system-breakdown">
-        <div class="container">
+        <div class="container" style="padding: 0 20px;">
             <h2>System Breakdown: Your Path to Profit</h2>
             <p>These graphics simplify the core concepts of the Copy Trading System, showing you how security, strategy, and earnings work together for your success.</p>
         </div>
@@ -704,6 +645,7 @@
                     </ul>
                     <p style="margin-top: 15px; font-size: 0.95rem; color: #777;">*All amounts are in USD/USDT. Monthly income potential is an estimate based on historical performance.</p>
                 </div>
+                
                 <div class="step-card">
                     <span>3</span>
                     <h3>Learn & Earn (10 am - 1 pm UK)</h3>
@@ -723,7 +665,7 @@
     </section>
 
     <section class="photo-section">
-        <div class="container">
+        <div class="container" style="padding: 0 20px;">
             <h2>Our Joyful Community in Action</h2>
             <p style="margin-bottom: 40px; font-size: 1.1rem;">Get a glimpse of the supportive and successful team you'll be joining!</p>
 
@@ -734,28 +676,27 @@
                 </video>
                 <div class="video-caption">A member's thank you video celebrating their success with the NexusX community!</div>
             </div>
-
-            <div class="photo-grid">
-                <img src="photo_2025-10-12_20-57-30.jpg" alt="Community member photo 1">
-                <img src="photo_2025-10-12_20-57-29.jpg" alt="Community member photo 2">
-                <img src="photo_2025-10-12_20-57-28.jpg" alt="Community member photo 3">
-                <img src="photo_2025-10-12_20-57-27.jpg" alt="Community member photo 4">
-                <img src="photo_2025-10-12_20-57-25.jpg" alt="Community member photo 5">
-                <img src="photo_2025-10-12_20-57-23.jpg" alt="Community member photo 6">
-                <img src="photo_2025-10-12_20-57-22.jpg" alt="Community member photo 7">
-                <img src="photo_2025-10-12_20-57-21.jpg" alt="Community member photo 8">
-                <img src="photo_2025-10-12_20-57-20.jpg" alt="Community member photo 9">
-                <img src="photo_2025-10-12_20-57-16.jpg" alt="Community member photo 10">
-                <img src="photo_2025-10-12_20-57-15.jpg" alt="Community member photo 11">
-                <img src="photo_2025-10-12_20-57-14.jpg" alt="Community member photo 12">
-                <img src="photo_2025-10-12_20-57-12.jpg" alt="Community member photo 13">
-                <img src="photo_2025-10-12_20-57-11.jpg" alt="Community member photo 14">
-                <img src="photo_2025-10-12_20-57-10.jpg" alt="Community member photo 15">
-                <img src="photo_2025-10-12_20-57-09.jpg" alt="Community member photo 16">
-                <img src="photo_2025-10-12_20-57-08.jpg" alt="Community member photo 17">
-                <img src="photo_2025-10-12_20-57-04.jpg" alt="Community member photo 18">
-                <img src="photo_2025-10-12_20-57-17.jpg" alt="Community member photo 19">
-            </div>
+        </div>
+        
+        <div class="photo-grid">
+            <img src="photo_2025-10-12_20-57-30.jpg" alt="Community member photo 1">
+            <img src="photo_2025-10-12_20-57-29.jpg" alt="Community member photo 2">
+            <img src="photo_2025-10-12_20-57-28.jpg" alt="Community member photo 3">
+            <img src="photo_2025-10-12_20-57-27.jpg" alt="Community member photo 4">
+            <img src="photo_2025-10-12_20-57-25.jpg" alt="Community member photo 5">
+            <img src="photo_2025-10-12_20-57-23.jpg" alt="Community member photo 6">
+            <img src="photo_2025-10-12_20-57-22.jpg" alt="Community member photo 7">
+            <img src="photo_2025-10-12_20-57-21.jpg" alt="Community member photo 8">
+            <img src="photo_2025-10-12_20-57-20.jpg" alt="Community member photo 9">
+            <img src="photo_2025-10-12_20-57-16.jpg" alt="Community member photo 10">
+            <img src="photo_2025-10-12_20-57-15.jpg" alt="Community member photo 11">
+            <img src="photo_2025-10-12_20-57-14.jpg" alt="Community member photo 12">
+            <img src="photo_2025-10-12_20-57-12.jpg" alt="Community member photo 13">
+            <img src="photo_2025-10-12_20-57-11.jpg" alt="Community member photo 14">
+            <img src="photo_2025-10-12_20-57-10.jpg" alt="Community member photo 15">
+            <img src="photo_2025-10-12_20-57-09.jpg" alt="Community member photo 16">
+            <img src="photo_2025-10-12_20-57-08.jpg" alt="Community member photo 17">
+            <img src="photo_2025-10-12_20-57-04.jpg" alt="Community member photo 18">
         </div>
     </section>
     
