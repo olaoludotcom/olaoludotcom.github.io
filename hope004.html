@@ -1,10 +1,3 @@
-I have successfully added the video to the **"Our Joyful Community in Action"** section.
-
-I've placed it prominently at the top of the grid and included a descriptive caption to reflect that it is a thank you video from a member, making it a great testimonial.
-
-Here is the complete, updated HTML code:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -247,33 +240,6 @@ Here is the complete, updated HTML code:
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-        
-        /* --- Summary Document Section --- */
-        .summary-document {
-            padding: 40px 20px;
-            background-color: var(--secondary-color); 
-            text-align: center;
-        }
-        .summary-document p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: var(--text-color);
-            font-weight: bold;
-        }
-        .summary-document .cta-link {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-        .summary-document .cta-link:hover {
-            background-color: var(--dark-green);
-        }
 
 
         /* --- Roadmap Section --- */
@@ -329,42 +295,21 @@ Here is the complete, updated HTML code:
              margin-top: 15px;
         }
         
-        /* --- Photo Grid Section --- */
+        /* --- New Photo Grid Section --- */
         .photo-section {
-            padding: 80px 20px;
+            padding: 80px 20px; /* Increased padding for emphasis */
             background-color: var(--white);
             text-align: center;
         }
         .photo-section h2 {
-            font-size: 2.8rem;
+            font-size: 2.8rem; /* Larger font size */
             color: var(--dark-green);
             margin-bottom: 40px;
-            font-weight: bold;
-        }
-        .video-container {
-            width: 100%;
-            max-width: 600px; /* Constrain video size */
-            margin: 0 auto 40px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-        }
-        .video-container video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .video-caption {
-            font-size: 1.1rem;
-            font-style: italic;
-            color: var(--text-color);
-            margin-top: 15px;
-            margin-bottom: 20px;
-            font-weight: 600;
+            font-weight: bold; /* Bold text */
         }
         .photo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjusted min-width for more images */
             gap: 20px;
         }
         .photo-grid img {
@@ -373,10 +318,11 @@ Here is the complete, updated HTML code:
             border-radius: 10px;
             box-shadow: var(--box-shadow);
             transition: transform 0.3s ease;
+            /* Ensure images are visually large and regular */
             max-width: 100%; 
             height: auto;
             object-fit: cover;
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 1 / 1; /* Keep images square for a neat grid */
         }
         .photo-grid img:hover {
             transform: scale(1.02);
@@ -534,15 +480,6 @@ Here is the complete, updated HTML code:
         </div>
     </section>
 
-    <section class="summary-document">
-        <div class="container">
-            <p>Ready for a deeper dive? Download our comprehensive PDF summary to see the full details of the NexusX system.</p>
-            <a href="uploaded:NexusX-PPT.pdf" class="cta-link" download="NexusX-Summary.pdf">
-                ⬇️ Download Full System Summary (PDF)
-            </a>
-        </div>
-    </section>
-
     <section class="roadmap">
         <div class="container">
             <h2>The Foolproof, Friendly Roadmap to Get Started</h2>
@@ -589,15 +526,6 @@ Here is the complete, updated HTML code:
         <div class="container">
             <h2>Our Joyful Community in Action</h2>
             <p style="margin-bottom: 40px; font-size: 1.1rem;">Get a glimpse of the supportive and successful team you'll be joining!</p>
-
-            <div class="video-container">
-                <video controls poster="photo_2025-10-12_20-57-06.jpg">
-                    <source src="uploaded:video_2025-10-12_20-57-19.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-caption">A member's thank you video celebrating their success with the NexusX community!</div>
-            </div>
-
             <div class="photo-grid">
                 <img src="photo_2025-10-12_20-57-30.jpg" alt="Community member photo 1">
                 <img src="photo_2025-10-12_20-57-29.jpg" alt="Community member photo 2">
@@ -641,4 +569,3 @@ Here is the complete, updated HTML code:
 
 </body>
 </html>
-```
