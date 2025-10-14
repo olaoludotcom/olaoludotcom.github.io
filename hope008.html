@@ -8,7 +8,7 @@
         /* --- General Styles for a Friendly, Joyful Look --- */
         :root {
             --primary-color: #4CAF50; /* Joyful Green */
-            --secondary-color: #FFC107; /* Optimistic Yellow / Golden Yellow */
+            --secondary-color: #FFC107; /* Optimistic Yellow */
             --text-color: #333;
             --light-bg: #F9FFF5; /* Very Light Green/Off-White */
             --white: #ffffff;
@@ -32,11 +32,11 @@
         }
 
         .container {
-            max-width: 1100px; /* Uniform maximum width */
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 20px; /* Uniform horizontal padding */
+            padding: 0 20px;
         }
-        
+
         /* --- Buttons & Links --- */
         .cta-button {
             display: inline-block;
@@ -173,69 +173,10 @@
         .feature-box p {
             font-size: 1.1rem;
         }
-        
-        /* --- Awards & Testimonials Section --- */
-        .awards {
-            padding: 60px 0; /* Keeps the background full width */
-            background-color: var(--white);
-            text-align: center;
-        }
-        .awards h2 {
-            font-size: 2.8rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        .awards > p {
-             font-size: 1.1rem;
-             margin-bottom: 30px;
-        }
-        .testimonial-card {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: var(--light-bg);
-            border-radius: 15px;
-            box-shadow: var(--box-shadow);
-            border-left: 5px solid var(--secondary-color);
-            text-align: left;
-        }
-        .testimonial-card blockquote {
-            font-style: italic;
-            font-size: 1.2rem;
-            color: var(--text-color);
-            margin-bottom: 15px;
-        }
-        .testimonial-card cite {
-            display: block;
-            font-weight: bold;
-            color: var(--dark-green);
-        }
-        
-        /* Video Container for Awards Section (Now Contained) */
-        .awards-video-container {
-            max-width: 1100px; /* Constrain to main content width */
-            margin: 40px auto;
-            padding: 0 20px; /* Add the side padding */
-        }
-        .awards-video-container video {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 15px;
-            box-shadow: var(--box-shadow);
-            border: 5px solid var(--primary-color);
-        }
-        .awards-video-caption {
-            font-size: 1rem;
-            font-style: italic;
-            color: #777;
-            margin-top: 10px;
-        }
-
 
         /* --- Ecosystem Section Styles --- */
         .ecosystem {
-            padding: 80px 0; /* Keeps the background full width */
+            padding: 80px 20px;
             background-color: var(--white);
             text-align: center;
         }
@@ -249,8 +190,22 @@
             margin: 0 auto 40px;
             font-size: 1.1rem;
         }
-        
-        /* Styles for the Roles Grid */
+        /* NEW STYLES FOR HALF-PAGE IMAGE WITH BOLD BORDER */
+        .ecosystem-visual {
+            max-width: 50%; /* Half the container width */
+            margin: 40px auto;
+            border: 5px solid #FFD740; /* Golden Yellow Border */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        .ecosystem-visual img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* END NEW STYLES */
         .roles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -276,51 +231,19 @@
             position: relative;
             padding-bottom: 10px;
         }
+        .role-card h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 50px;
+            background-color: var(--secondary-color);
+        }
         .role-card p strong {
             color: var(--primary-color);
         }
-        
-        /* --- Universal Visual Containers (Now Contained) --- */
-        .full-width-visual,
-        .infographic-full-width,
-        .photo-grid {
-            max-width: 1100px; /* Constrain to main content width */
-            margin: 40px auto; /* Vertical spacing and centering */
-            padding: 0 20px; /* Add the side padding for content alignment */
-            width: 100%;
-            display: block;
-        }
 
-        .full-width-visual img, 
-        .infographic-full-width img,
-        .photo-grid img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto 30px; /* Spacing between stacked visuals */
-            /* UNIVERSAL BORDER STYLE */
-            border: 8px solid var(--secondary-color); 
-            border-radius: 15px; 
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3); 
-        }
-        /* Remove margin from last element in groups */
-        .infographic-full-width img:last-child,
-        .photo-grid img:last-child {
-            margin-bottom: 0;
-        }
-        
-        /* --- System Breakdown Section --- */
-        .system-breakdown {
-            padding-top: 60px;
-            padding-bottom: 60px;
-            background-color: var(--light-bg);
-            text-align: center;
-        }
-        .system-breakdown h2 {
-            font-size: 2.5rem;
-            color: var(--dark-green);
-            margin-bottom: 30px;
-        }
         
         /* --- Summary Document Section --- */
         .summary-document {
@@ -348,6 +271,7 @@
         .summary-document .cta-link:hover {
             background-color: var(--dark-green);
         }
+
 
         /* --- Roadmap Section --- */
         .roadmap {
@@ -385,28 +309,15 @@
             color: var(--text-color);
             margin-bottom: 10px;
         }
-        /* Consistent small font size for all step card paragraphs */
-        .step-card p {
-            margin-bottom: 15px;
-            font-size: 0.95rem; /* Very small font for better fit */
-        }
         .step-card p strong {
             color: var(--primary-color);
         }
-        /* Footnote text uses the very small size */
-        .step-card .tier-caption {
-            margin-top: 15px;
-            font-size: 0.95rem; /* Very small font for better fit */
-            color: #777;
-            margin-bottom: 0;
-        }
-        /* Adjusted font size for the code box */
         .code-box {
             background-color: var(--secondary-color);
             color: var(--text-color);
             padding: 10px 20px;
             border-radius: 8px;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-weight: bold;
             margin: 15px auto 0;
             display: inline-block;
@@ -415,98 +326,60 @@
              margin-top: 15px;
         }
 
-        /* --- START RAINBOW TABLE STYLES --- */
+        /* NEW STYLES FOR FUNDING TIERS (Step 2) */
         .tier-list {
             list-style: none;
             padding: 0;
-            margin: 15px 0 0 0;
-            max-width: 350px;
-            margin-left: auto;
-            margin-right: auto;
-            border: 3px solid #333; /* Darker, clearer border for table */
-            border-radius: 12px;
-            overflow: hidden;
-            font-size: 0.85rem; /* KEEP VERY SMALL SIZE */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Add shadow for pop */
+            margin-top: 20px;
+            text-align: center; 
         }
         .tier-item {
+            background-color: var(--white);
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid var(--primary-color);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            font-size: 1rem;
             display: flex;
             justify-content: space-between;
-            padding: 10px 15px; /* Slightly more padding */
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Lighter divider for contrast */
-            text-align: left;
-            line-height: 1.2;
-            font-weight: bold; /* Make the row text bold for impact */
+            align-items: center;
+            flex-wrap: wrap; 
         }
-        .tier-item:last-child {
-            border-bottom: none;
-        }
-        .tier-item strong, .tier-item span {
-            flex: 1;
-            text-align: center; /* Center text for clear columns */
-            font-weight: 700;
-            text-shadow: 0 0 2px rgba(0,0,0,0.5); /* Shadow for legibility on colors */
-        }
-        /* Column specific styling */
-        .tier-item .deposit {
-            flex: 1.3;
-            text-align: left;
-            color: #FFF; /* White text on all color cells by default */
-            text-shadow: 0 0 3px rgba(0,0,0,0.9);
-        }
-        .tier-item .bonus {
-            flex: 1.5;
-            color: #FFF;
-            text-shadow: 0 0 3px rgba(0,0,0,0.9);
-        }
-        .tier-item .income {
-            flex: 1.5;
-            text-align: right;
-            color: #FFF;
-            text-shadow: 0 0 3px rgba(0,0,0,0.9);
-        }
-
-        /* RAINBOW COLORS (Using nth-child to target data rows starting at 2) */
-        .tier-item:nth-child(2) { background-color: #FF6347; color: #FFF; } /* Red (Deposit $300) */
-        .tier-item:nth-child(3) { background-color: #FFD700; color: #333; } /* Yellow (Deposit $500) */
-        .tier-item:nth-child(4) { background-color: #3CB371; color: #FFF; } /* Green (Deposit $1,000) */
-        .tier-item:nth-child(5) { background-color: #1E90FF; color: #FFF; } /* Blue (Deposit $2,000) */
-        .tier-item:nth-child(6) { background-color: #9370DB; color: #FFF; } /* Purple (Deposit $3,000) */
-
-        /* Override text color for yellow row for contrast against light background */
-        .tier-item:nth-child(3) .deposit,
-        .tier-item:nth-child(3) .bonus,
-        .tier-item:nth-child(3) .income {
-            color: #333 !important;
-            text-shadow: none;
-        }
-
-        /* Header style */
-        .tier-item.tier-header {
-            background-color: #000; /* Black Header for contrast */
-            color: var(--secondary-color); /* Yellow text */
+        .tier-item strong.deposit {
+            color: var(--dark-green);
+            font-size: 1.1rem;
             font-weight: 900;
-            font-size: 0.95rem; /* Slightly larger header for prominence */
-            padding: 12px 15px;
-            border-bottom: 4px solid var(--secondary-color);
-            text-transform: uppercase;
+            width: 30%; 
+            text-align: left;
         }
-        .tier-item.tier-header strong, .tier-item.tier-header span {
-            color: var(--secondary-color) !important;
-            text-decoration: none;
+        .tier-item strong.bonus {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            font-weight: 900;
+            width: 30%;
+            text-align: center;
         }
+        .tier-item span.income {
+            color: var(--text-color);
+            font-size: 1rem;
+            width: 40%;
+            text-align: right;
+            font-weight: 600;
+        }
+        .tier-header {
+             font-weight: bold; 
+             background-color: var(--light-bg); 
+             border: none; 
+             box-shadow: none;
+             margin-bottom: 5px;
+        }
+        /* END NEW STYLES */
         
-        /* Specific style for the highlighted tier (Purple row) */
-        .tier-item.highlight {
-            border: 3px dashed var(--secondary-color) !important; /* Dashed yellow border for highlight */
-            box-shadow: 0 0 10px rgba(255, 193, 7, 0.9); /* Add glowing effect */
-        }
-        /* --- END RAINBOW TABLE STYLES --- */
-        
-        /* --- Photo Grid Section (Now Contained) --- */
+        /* --- Photo Grid Section --- */
         .photo-section {
-            padding: 80px 0; /* Keeps the background full width */
-            background-color: var(--light-bg);
+            padding: 80px 20px;
+            background-color: var(--white);
             text-align: center;
         }
         .photo-section h2 {
@@ -515,11 +388,47 @@
             margin-bottom: 40px;
             font-weight: bold;
         }
-        .photo-section p {
-            margin-bottom: 40px;
-            font-size: 1.1rem;
+        .video-container {
+            width: 100%;
+            max-width: 600px; /* Constrain video size */
+            margin: 0 auto 40px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
         }
-        
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .video-caption {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-color);
+            margin-top: 15px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+            max-width: 100%; 
+            height: auto;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+        }
+        .photo-grid img:hover {
+            transform: scale(1.02);
+        }
+
         /* --- Final CTA Section --- */
         .final-cta {
             background-color: var(--dark-green);
@@ -553,6 +462,11 @@
         }
 
         /* --- Responsive Adjustments --- */
+        @media (max-width: 900px) {
+            .ecosystem-visual {
+                max-width: 70%; /* Increase image size on smaller screens */
+            }
+        }
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -573,9 +487,26 @@
             .roles-grid {
                 grid-template-columns: 1fr;
             }
+            .ecosystem-visual {
+                max-width: 90%; /* Max width on small screens */
+            }
             .final-cta h2 {
                 font-size: 2rem;
             }
+        }
+        @media (max-width: 500px) {
+            .tier-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .tier-item strong.deposit,
+            .tier-item strong.bonus,
+            .tier-item span.income {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            .tier-item strong.deposit { text-align: center; }
+            .tier-item span.income { text-align: center; }
         }
     </style>
 </head>
@@ -639,13 +570,11 @@
         <div class="container">
             <h2>Our Kind Ecosystem: How It Works Together</h2>
             <p>In this simple, three-part model, we all play a crucial and supportive role to ensure security, expertise, and shared success. This is how your growth is managed:</p>
-        </div>
-        
-        <div class="full-width-visual">
-            <img src="photo_2025-10-13_21-12-19.jpg" alt="A visual diagram representing the NexusX Team, NCC Platform, and Community roles in the ecosystem." />
-        </div>
 
-        <div class="container">
+            <div class="ecosystem-visual">
+                <img src="photo_2025-10-13_21-12-19.jpg" alt="A visual diagram representing the NexusX Team, NCC Platform, and Community roles in the ecosystem." />
+            </div>
+
             <div class="roles-grid">
                 
                 <div class="role-card">
@@ -667,23 +596,10 @@
         </div>
     </section>
 
-    <section class="system-breakdown">
-        <div class="container">
-            <h2>System Breakdown: Your Path to Profit</h2>
-            <p>These graphics simplify the core concepts of the Copy Trading System, showing you how security, strategy, and earnings work together for your success.</p>
-        </div>
-        
-        <div class="infographic-full-width">
-            <img src="photo_2025-10-13_21-13-14.jpg" alt="Infographic detailing the funds and security process." />
-            <img src="photo_2025-10-13_21-13-12.jpg" alt="Infographic explaining the copy trading mechanism." />
-            <img src="photo_2025-10-13_21-13-11.jpg" alt="Infographic illustrating the daily settlement and profit sharing process." />
-        </div>
-    </section>
-
     <section class="summary-document">
         <div class="container">
             <p>Ready for a deeper dive? Download our comprehensive PDF summary to see the full details of the NexusX system.</p>
-            <a href="https://olaoludotcom.github.io/NexusX-PPT.pdf" class="cta-link" target="_blank">
+            <a href="uploaded:NexusX-PPT.pdf" class="cta-link" download="NexusX-Summary.pdf">
                 ⬇️ Download Full System Summary (PDF)
             </a>
         </div>
@@ -696,7 +612,7 @@
                 
                 <div class="step-card">
                     <span>1</span>
-                    <h3>Join Our Team (Jointly Building a Wealth Network)</h3>
+                    <h3>Join Our Team (It’s Free & Fast!)</h3>
                     <p>Click the link below and use our unique invite code to ensure you are placed directly into our support network.</p>
                     <div class="link-box">
                         <a href="https://northcrestcapital-va.com/#/pages/auth-signup/index?inviteCode=65ATBM" target="_blank" class="cta-button" style="padding: 10px 20px; font-size: 0.9rem;">Create Account Now</a>
@@ -708,44 +624,43 @@
                 <div class="step-card">
                     <span>2</span>
                     <h3>Fund Your Future: Tiered Rewards</h3>
-                    <p>Invest confidently and receive **instant bonuses** and excellent monthly income potential based on your deposit level:</p>
+                    <p style="margin-bottom: 20px; font-weight: 600;">Invest confidently and receive **instant bonuses** and excellent monthly income potential based on your deposit level:</p>
                     
-                    <div class="tier-item tier-header">
-                        <strong class="deposit">Deposit</strong>
-                        <strong class="bonus">Bonus</strong>
-                        <span class="income">Monthly Income</span>
+                    <div class="tier-item tier-header" style="text-transform: uppercase;">
+                        <strong class="deposit" style="color: var(--primary-color); text-decoration: underline;">Deposit</strong>
+                        <strong class="bonus" style="color: var(--primary-color); text-decoration: underline;">Bonus</strong>
+                        <span class="income" style="color: var(--primary-color); text-decoration: underline; text-align: right;">Monthly Income</span>
                     </div>
 
                     <ul class="tier-list">
                         <li class="tier-item">
-                            <strong class="deposit">$300</strong>
-                            <strong class="bonus">+ $15!</strong>
+                            <strong class="deposit">Deposit $300</strong>
+                            <strong class="bonus">+ $15 Bonus!</strong>
                             <span class="income">($150 - $180)</span>
                         </li>
                         <li class="tier-item">
-                            <strong class="deposit">$500</strong>
-                            <strong class="bonus">+ $25!</strong>
+                            <strong class="deposit">Deposit $500</strong>
+                            <strong class="bonus">+ $25 Bonus!</strong>
                             <span class="income">($250 - $280)</span>
                         </li>
                         <li class="tier-item">
-                            <strong class="deposit">$1,000</strong>
-                            <strong class="bonus">+ $50!</strong>
+                            <strong class="deposit">Deposit $1,000</strong>
+                            <strong class="bonus">+ $50 Bonus!</strong>
                             <span class="income">($500 - $580)</span>
                         </li>
                         <li class="tier-item">
-                            <strong class="deposit">$2,000</strong
-                            ><strong class="bonus">+ $100!</strong>
+                            <strong class="deposit">Deposit $2,000</strong>
+                            <strong class="bonus">+ $100 Bonus!</strong>
                             <span class="income">($1,000 - $1,200)</span>
                         </li>
-                        <li class="tier-item highlight">
-                            <strong class="deposit">$3,000</strong>
-                            <strong class="bonus">+ $150!</strong>
+                        <li class="tier-item" style="border-width: 3px; border-style: double; border-color: var(--secondary-color);">
+                            <strong class="deposit">Deposit $3,000</strong>
+                            <strong class="bonus">+ $150 Bonus!</strong>
                             <span class="income">($1,500 - $1,800)</span>
                         </li>
                     </ul>
-                    <p class="tier-caption">*All amounts are in USD/USDT. Monthly income potential is an estimate based on historical performance.</p>
-                    </div>
-                
+                    <p style="margin-top: 15px; font-size: 0.95rem; color: #777;">*All amounts are in USD/USDT. Monthly income potential is an estimate based on historical performance.</p>
+                </div>
                 <div class="step-card">
                     <span>3</span>
                     <h3>Learn & Earn (10 am - 1 pm UK)</h3>
@@ -754,7 +669,7 @@
                 </div>
                 
                 <div class="step-card">
-                    <span>4</span>
+                    <span>4</SPAN>
                     <h3>Withdraw and Tell Others!</h3>
                     <p>The final step is the most joyful: when you've made enough, you simply withdraw your profits and then tell others about this wonderful, life-changing opportunity!</p>
                     <p>It's built to be a simple, repeatable process for ongoing success.</p>
@@ -767,61 +682,36 @@
     <section class="photo-section">
         <div class="container">
             <h2>Our Joyful Community in Action</h2>
-            <p>Here is a glimpse of the supportive and successful team you'll be joining, celebrating their shared victories.</p>
-        </div>
-        
-        <div class="photo-grid">
-            <img src="photo_2025-10-13_21-13-07.jpg" alt="Community member photo 1">
-            <img src="photo_2025-10-13_21-13-03.jpg" alt="Community member photo 2">
-            <img src="photo_2025-10-13_21-13-01.jpg" alt="Community member photo 3">
-            <img src="photo_2025-10-13_21-13-00.jpg" alt="Community member photo 4">
-            <img src="photo_2025-10-13_21-12-58.jpg" alt="Community member photo 5">
-            <img src="photo_2025-10-13_21-12-56.jpg" alt="Community member photo 6">
-            <img src="photo_2025-10-13_21-12-54.jpg" alt="Community member photo 7">
-            <img src="photo_2025-10-13_21-12-52.jpg" alt="Community member photo 8">
-            <img src="photo_2025-10-13_21-12-49.jpg" alt="Community member photo 9">
-            <img src="photo_2025-10-13_21-12-42.jpg" alt="Community member photo 10">
-            <img src="photo_2025-10-13_21-12-35.jpg" alt="Community member photo 11">
-            <img src="photo_2025-10-13_21-12-27.jpg" alt="Community member photo 12">
-            <img src="photo_2025-10-13_21-12-26.jpg" alt="Community member photo 13">
-            <img src="photo_2025-10-13_21-12-24.jpg" alt="Community member photo 14">
-        </div>
-    </section>
-    
-    <section class="awards">
-        <div class="container">
-            <h2>Proof & Praise: Awards and Testimonials</h2>
-            <p>We don't just talk about success—we celebrate it! Our platform is trusted and our community is thriving. See what we're achieving and what our members are saying.</p>
-        </div>
-        
-        <div class="full-width-visual">
-            <img src="photo_2025-10-13_21-12-25.jpg" alt="Photo displaying awards and recognition." />
-        </div>
-        
-        <div class="awards-video-container">
-            <video controls poster="photo_2025-10-13_21-12-30.jpg">
-                <source src="video_2025-10-13_21-12-47.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="awards-video-caption">Celebrating a member's milestone achievement—a brand new luxury car!</div>
-        </div>
-        
-        <div class="full-width-visual">
-            <img src="photo_2025-10-13_21-12-30.jpg" alt="Testimonial photo of a member posing with their new car." />
-        </div>
-        
-         <div class="full-width-visual">
-            <img src="photo_2025-10-13_21-12-40.jpg" alt="Testimonial photo of a member receiving car keys." />
-        </div>
-        
-        <div class="container">
-            <div class="testimonial-card">
-                <blockquote>"I was skeptical at first, but the simplicity of the system and the kindness of the team made all the difference. I'm now making steady returns and have peace of mind about my future!"</blockquote>
-                <cite>— Alice, Community Member, UK</cite>
+            <p style="margin-bottom: 40px; font-size: 1.1rem;">Get a glimpse of the supportive and successful team you'll be joining!</p>
+
+            <div class="video-container">
+                <video controls poster="photo_2025-10-12_20-57-06.jpg">
+                    <source src="uploaded:video_2025-10-12_20-57-19.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption">A member's thank you video celebrating their success with the NexusX community!</div>
             </div>
-             <div class="testimonial-card">
-                <blockquote>"This isn't high-risk gambling; it's disciplined, copied trading. The platform is robust, the experts are top-tier, and the monthly income has been a stable blessing."</blockquote>
-                <cite>— David, Community Member, Canada</cite>
+
+            <div class="photo-grid">
+                <img src="photo_2025-10-12_20-57-30.jpg" alt="Community member photo 1">
+                <img src="photo_2025-10-12_20-57-29.jpg" alt="Community member photo 2">
+                <img src="photo_2025-10-12_20-57-28.jpg" alt="Community member photo 3">
+                <img src="photo_2025-10-12_20-57-27.jpg" alt="Community member photo 4">
+                <img src="photo_2025-10-12_20-57-25.jpg" alt="Community member photo 5">
+                <img src="photo_2025-10-12_20-57-23.jpg" alt="Community member photo 6">
+                <img src="photo_2025-10-12_20-57-22.jpg" alt="Community member photo 7">
+                <img src="photo_2025-10-12_20-57-21.jpg" alt="Community member photo 8">
+                <img src="photo_2025-10-12_20-57-20.jpg" alt="Community member photo 9">
+                <img src="photo_2025-10-12_20-57-16.jpg" alt="Community member photo 10">
+                <img src="photo_2025-10-12_20-57-15.jpg" alt="Community member photo 11">
+                <img src="photo_2025-10-12_20-57-14.jpg" alt="Community member photo 12">
+                <img src="photo_2025-10-12_20-57-12.jpg" alt="Community member photo 13">
+                <img src="photo_2025-10-12_20-57-11.jpg" alt="Community member photo 14">
+                <img src="photo_2025-10-12_20-57-10.jpg" alt="Community member photo 15">
+                <img src="photo_2025-10-12_20-57-09.jpg" alt="Community member photo 16">
+                <img src="photo_2025-10-12_20-57-08.jpg" alt="Community member photo 17">
+                <img src="photo_2025-10-12_20-57-04.jpg" alt="Community member photo 18">
+                <img src="photo_2025-10-12_20-57-17.jpg" alt="Community member photo 19">
             </div>
         </div>
     </section>
