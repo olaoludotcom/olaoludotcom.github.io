@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Sign Has Arrived: YIELD to a Joyful New Beginning</title>
+    <style>
+        /* --- General Styles for a Friendly, Joyful Look --- */
+        :root {
+            --primary-color: #4CAF50; /* Joyful Green */
+            --secondary-color: #FFC107; /* Optimistic Yellow / Golden Yellow */
+            --text-color: #333;
+            --light-bg: #F9FFF5; /* Very Light Green/Off-White */
+            --white: #ffffff;
+            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --dark-green: #388E3C;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Apply padding to the main container when needed, or 0 if full-width elements are inside */
+        .content-container-padded {
+            padding-left: 20px;
+            padding-right: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* --- Buttons & Links --- */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.5);
+            border: none;
+        }
+
+        .cta-button:hover {
+            background-color: #FFD740;
+            transform: translateY(-2px);
+        }
+
+        .cta-email {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-weight: 900;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            margin-top: 15px;
+        }
+        .cta-email:hover {
+            color: var(--dark-green);
+        }
+
+        /* --- Header/Hero Section --- */
+        .hero {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+            background-image: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            font-weight: 900;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+
+        .hero .cta-button {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        /* --- Value Proposition Section --- */
+        .values {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--white);
+        }
+        .values h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .value-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .value-item {
+            width: 180px;
+            margin: 20px 10px;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: var(--light-bg);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            font-weight: bold;
+            color: var(--dark-green);
+            text-transform: uppercase;
+        }
+        
+        /* --- Opportunity Section --- */
+        .opportunity {
+            padding: 80px 20px;
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+        .opportunity h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--text-color);
+        }
+        .feature-box {
+            display: flex;
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            text-align: left;
+            align-items: center;
+        }
+        .feature-box.reverse {
+            flex-direction: row-reverse;
+        }
+        .feature-box .icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-right: 20px;
+        }
+        .feature-box.reverse .icon {
+            margin-left: 20px;
+            margin-right: 0;
+        }
+        .feature-box h3 {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .feature-box p {
+            font-size: 1.1rem;
+        }
+        
+        /* --- Awards & Testimonials Section --- */
+        .awards {
+            padding: 60px 0; /* Remove horizontal padding for full-width image */
+            background-color: var(--white);
+            text-align: center;
+        }
+        .awards h2 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+        .awards p {
+             font-size: 1.1rem;
+             padding: 0 20px;
+             margin-bottom: 30px;
+        }
+        .testimonial-card {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--light-bg);
+            border-radius: 15px;
+            box-shadow: var(--box-shadow);
+            border-left: 5px solid var(--secondary-color);
+            text-align: left;
+        }
+        .testimonial-card blockquote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+        .testimonial-card cite {
+            display: block;
+            font-weight: bold;
+            color: var(--dark-green);
+        }
+
+        /* --- Ecosystem Section Styles --- */
+        .ecosystem {
+            padding: 80px 0; /* Removed horizontal padding */
+            background-color: var(--white);
+            text-align: center;
+        }
+        .ecosystem h2 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .ecosystem > p {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            padding: 0 20px; /* Keep text padded */
+        }
+        
+        /* Styles for the Roles Grid (Kept padded) */
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            padding: 0 20px; /* Keep roles grid padded */
+        }
+        .role-card {
+            background-color: var(--light-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: left;
+            border-bottom: 5px solid var(--secondary-color);
+            transition: transform 0.3s ease;
+        }
+        .role-card:hover {
+            transform: translateY(-5px);
+        }
+        .role-card h3 {
+            font-size: 1.8rem;
+            color: var(--dark-green);
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .role-card p strong {
+            color: var(--primary-color);
+        }
+        
+        /* --- Universal Full-Width Image Styling --- */
+        .full-width-visual {
+            width: 100%;
+            display: block;
+            margin: 40px auto;
+            padding: 0 15px; /* Padding for the screen edge, so border doesn't touch */
+        }
+
+        .full-width-visual img, 
+        .infographic-full-width img,
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 30px; /* Standalone spacing */
+            /* UNIVERSAL BORDER STYLE */
+            border: 8px solid var(--secondary-color); 
+            border-radius: 15px; 
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow for impact */
+        }
+        /* Remove margin from last element in groups */
+        .infographic-full-width img:last-child,
+        .photo-grid img:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* --- System Breakdown Section --- */
+        .system-breakdown {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            padding-left: 0; 
+            padding-right: 0; 
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+        .system-breakdown h2 {
+            font-size: 2.5rem;
+            color: var(--dark-green);
+            margin-bottom: 30px;
+        }
+        /* New container for full width images */
+        .infographic-full-width {
+            width: 100%;
+            margin-top: 30px;
+            display: block;
+            padding: 0 15px; /* Match universal padding */
+        }
+        
+        /* --- Summary Document Section --- */
+        .summary-document {
+            padding: 40px 20px;
+            background-color: var(--secondary-color); 
+            text-align: center;
+        }
+        .summary-document p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            font-weight: bold;
+        }
+        .summary-document .cta-link {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .summary-document .cta-link:hover {
+            background-color: var(--dark-green);
+        }
+
+        /* --- Roadmap Section --- */
+        .roadmap {
+            padding: 80px 20px;
+            background-color: var(--light-bg); 
+            text-align: center;
+        }
+        .roadmap h2 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 60px;
+        }
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .step-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            border-top: 5px solid var(--secondary-color);
+        }
+        .step-card span {
+            display: block;
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .step-card h3 {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+        .step-card p strong {
+            color: var(--primary-color);
+        }
+        .code-box {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 15px auto 0;
+            display: inline-block;
+        }
+        .link-box {
+             margin-top: 15px;
+        }
+        
+        /* --- Photo Grid Section (Now Stacked Full-Width) --- */
+        .photo-section {
+            padding: 80px 0; /* Removed horizontal padding */
+            background-color: var(--white);
+            text-align: center;
+        }
+        .photo-section h2 {
+            font-size: 2.8rem;
+            color: var(--dark-green);
+            margin-bottom: 40px;
+            font-weight: bold;
+            padding: 0 20px; /* Keep text padded */
+        }
+        .photo-section p {
+            padding: 0 20px; /* Keep text padded */
+        }
+        .video-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            padding: 0 20px; /* Keep video padded */
+        }
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .video-caption {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-color);
+            margin-top: 15px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .photo-grid {
+            /* Changed from grid to block for full-width stacking */
+            display: block;
+            padding: 0 15px; /* Match universal padding */
+        }
+        
+        /* --- Final CTA Section --- */
+        .final-cta {
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .final-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+        }
+        .final-cta .cta-email {
+            color: var(--secondary-color);
+        }
+        .final-cta .cta-email:hover {
+             color: #FFD740;
+        }
+        
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #888;
+            background-color: #f1f1f1;
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .feature-box, .feature-box.reverse {
+                flex-direction: column;
+                text-align: center;
+            }
+            .feature-box .icon, .feature-box.reverse .icon {
+                margin: 0 0 20px 0;
+            }
+            .value-item {
+                width: 150px;
+            }
+            .roles-grid {
+                grid-template-columns: 1fr;
+            }
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 500px) {
+            .full-width-visual,
+            .infographic-full-width,
+            .photo-grid {
+                 padding: 0 5px; /* Reduce padding on smallest screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Your Sign Has Arrived: Time to **YIELD** to a Joyful New Beginning!</h1>
+            <p>If you have been waiting for a sign, this might as well be it. **YIELD.** This is your moment to step into a world of **simple, authentic, and truly kind** wealth growth.</p>
+            <a href="mailto:training@olaolu.com" class="cta-button">Ask for Details & Start Now! 😇</a>
+        </div>
+    </header>
+
+    <section class="values">
+        <div class="container">
+            <h2>Our Commitment to You</h2>
+            <p>We’ve created a program that is everything traditional finance is not:</p>
+            <div class="value-grid">
+                <div class="value-item">Simple</div>
+                <div class="value-item">Friendly</div>
+                <div class="value-item">Joyful</div>
+                <div class="value-item">Authentic</div>
+                <div class="value-item">Fool Proof</div>
+                <div class="value-item">Kind</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="opportunity">
+        <div class="container">
+            <h2>The Opportunity: Effortless Growth, Authentic Results</h2>
+            
+            <div class="feature-box">
+                <div class="icon">✨</div>
+                <div>
+                    <h3>It's Simple: Copy the Pros</h3>
+                    <p>You don't have to guess or struggle. We use a powerful, proven **copy trading system** that allows you to effortlessly duplicate the successful strategies of a top-tier analyst team. They do the heavy lifting, and you reap the rewards!</p>
+                </div>
+            </div>
+
+            <div class="feature-box reverse">
+                <div class="icon">⏰</div>
+                <div>
+                    <h3>It's Joyful: Minimal Time Commitment</h3>
+                    <p>Your daily commitment is minimal, freeing up your time for the things and people you love. You only need to dedicate a short, specific window—**between 10:00 am and 1:00 pm UK time**—to perform your simple daily steps. That's all it takes!</p>
+                </div>
+            </div>
+            
+            <div class="feature-box">
+                <div class="icon">🤝</div>
+                <div>
+                    <h3>It's Authentic: Built on Trust</h3>
+                    <p>This is more than just a platform; it's a movement focused on creating a stable financial future. Our program is built on **NorthcrestCapital (NCC)**, a robust and reputable platform, committed to long-term, stable benefits.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <section class="awards">
+        <div class="content-container-padded">
+            <h2>Proof & Praise: Awards and Testimonials</h2>
+            <p>We don't just talk about success—we celebrate it! Our platform is trusted and our community is thriving.</p>
+        </div>
+        
+        <div class="full-width-visual">
+            <img src="photo_2025-10-13_21-12-25.jpg" alt="Photo displaying awards and recognition." />
+        </div>
+        
+        <div class="content-container-padded">
+            <div class="testimonial-card">
+                <blockquote>"I was skeptical at first, but the simplicity of the system and the kindness of the team made all the difference. I'm now making steady returns and have peace of mind about my future!"</blockquote>
+                <cite>— Alice, Community Member, UK</cite>
+            </div>
+             <div class="testimonial-card">
+                <blockquote>"This isn't high-risk gambling; it's disciplined, copied trading. The platform is robust, the experts are top-tier, and the monthly income has been a stable blessing."</blockquote>
+                <cite>— David, Community Member, Canada</cite>
+            </div>
+        </div>
+    </section>
+    <section class="ecosystem">
+        <div class="content-container-padded">
+            <h2>Our Kind Ecosystem: How It Works Together</h2>
+            <p>In this simple, three-part model, we all play a crucial and supportive role to ensure security, expertise, and shared success. This is how your growth is managed:</p>
+        </div>
+        
+        <div class="full-width-visual">
+            <img src="photo_2025-10-13_21-12-19.jpg" alt="A visual diagram representing the NexusX Team, NCC Platform, and Community roles in the ecosystem." />
+        </div>
+
+        <div class="content-container-padded">
+            <div class="roles-grid">
+                
+                <div class="role-card">
+                    <h3>1. NexusX Team (The Experts)</h3>
+                    <p>Led by Ethan, this team of **over 200 professional analysts** performs all the expert trading and strategy execution. They receive a <strong>15% commission</strong> proportional to overall profits, which covers their daily operations and technical research and development.</p>
+                </div>
+
+                <div class="role-card">
+                    <h3>2. NCC Copy Trading Platform (The Protector)</h3>
+                    <p>The NCC platform is responsible for all **fund deposits, withdrawals, custody, and security oversight**, as well as AI-based quantitative data analysis. They charge a <strong>20% service fee</strong> on profits (only when you withdraw) to cover platform maintenance and security upgrades.</p>
+                </div>
+
+                <div class="role-card">
+                    <h3>3. You (The Community)</h3>
+                    <p>You are no longer an isolated investor! Through the "copy trading" system, you participate in US stock trading as a **collective**, sharing in substantial profits according to your investment. Plus, you can earn more income by **building your own team** and participating in future projects in AI, education, and more.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="system-breakdown">
+        <div class="container" style="padding: 0 20px;">
+            <h2>System Breakdown: Your Path to Profit</h2>
+            <p>These graphics simplify the core concepts of the Copy Trading System, showing you how security, strategy, and earnings work together for your success.</p>
+        </div>
+        
+        <div class="infographic-full-width">
+            <img src="photo_2025-10-13_21-13-14.jpg" alt="Infographic detailing the funds and security process." />
+            <img src="photo_2025-10-13_21-13-12.jpg" alt="Infographic explaining the copy trading mechanism." />
+            <img src="photo_2025-10-13_21-13-11.jpg" alt="Infographic illustrating the daily settlement and profit sharing process." />
+        </div>
+    </section>
+    <section class="summary-document">
+        <div class="container">
+            <p>Ready for a deeper dive? Download our comprehensive PDF summary to see the full details of the NexusX system.</p>
+            <a href="uploaded:NexusX-PPT.pdf" class="cta-link" download="NexusX-Summary.pdf">
+                ⬇️ Download Full System Summary (PDF)
+            </a>
+        </div>
+    </section>
+
+    <section class="roadmap">
+        <div class="container">
+            <h2>The Foolproof, Friendly Roadmap to Get Started</h2>
+            <div class="step-grid">
+                
+                <div class="step-card">
+                    <span>1</span>
+                    <h3>Join Our Team (It’s Free & Fast!)</h3>
+                    <p>Click the link below and use our unique invite code to ensure you are placed directly into our support network.</p>
+                    <div class="link-box">
+                        <a href="https://northcrestcapital-va.com/#/pages/auth-signup/index?inviteCode=65ATBM" target="_blank" class="cta-button" style="padding: 10px 20px; font-size: 0.9rem;">Create Account Now</a>
+                    </div>
+                    <p>Your **Exclusive Invite Code:**</p>
+                    <div class="code-box">65ATBM</div>
+                </div>
+                
+                <div class="step-card">
+                    <span>2</span>
+                    <h3>Fund Your Future: Tiered Rewards</h3>
+                    <p style="margin-bottom: 20px; font-weight: 600;">Invest confidently and receive **instant bonuses** and excellent monthly income potential based on your deposit level:</p>
+                    
+                    <div class="tier-item tier-header" style="text-transform: uppercase;">
+                        <strong class="deposit" style="color: var(--primary-color); text-decoration: underline;">Deposit</strong>
+                        <strong class="bonus" style="color: var(--primary-color); text-decoration: underline;">Bonus</strong>
+                        <span class="income" style="color: var(--primary-color); text-decoration: underline; text-align: right;">Monthly Income</span>
+                    </div>
+
+                    <ul class="tier-list">
+                        <li class="tier-item">
+                            <strong class="deposit">Deposit $300</strong>
+                            <strong class="bonus">+ $15 Bonus!</strong>
+                            <span class="income">($150 - $180)</span>
+                        </li>
+                        <li class="tier-item">
+                            <strong class="deposit">Deposit $500</strong>
+                            <strong class="bonus">+ $25 Bonus!</strong>
+                            <span class="income">($250 - $280)</span>
+                        </li>
+                        <li class="tier-item">
+                            <strong class="deposit">Deposit $1,000</strong>
+                            <strong class="bonus">+ $50 Bonus!</strong>
+                            <span class="income">($500 - $580)</span>
+                        </li>
+                        <li class="tier-item">
+                            <strong class="deposit">Deposit $2,000</strong
+                            ><strong class="bonus">+ $100 Bonus!</strong>
+                            <span class="income">($1,000 - $1,200)</span>
+                        </li>
+                        <li class="tier-item" style="border-width: 3px; border-style: double; border-color: var(--secondary-color);">
+                            <strong class="deposit">Deposit $3,000</strong>
+                            <strong class="bonus">+ $150 Bonus!</strong>
+                            <span class="income">($1,500 - $1,800)</span>
+                        </li>
+                    </ul>
+                    <p style="margin-top: 15px; font-size: 0.95rem; color: #777;">*All amounts are in USD/USDT. Monthly income potential is an estimate based on historical performance.</p>
+                </div>
+                
+                <div class="step-card">
+                    <span>3</span>
+                    <h3>Learn & Earn (10 am - 1 pm UK)</h3>
+                    <p>Once your account is funded, our team will guide you through the quick daily steps required. This simple action happens in a short, dedicated window.</p>
+                    <p>You will learn exactly what to do daily between **10:00 am and 1:00 pm UK time.**</p>
+                </div>
+                
+                <div class="step-card">
+                    <span>4</span>
+                    <h3>Withdraw and Tell Others!</h3>
+                    <p>The final step is the most joyful: when you've made enough, you simply withdraw your profits and then tell others about this wonderful, life-changing opportunity!</p>
+                    <p>It's built to be a simple, repeatable process for ongoing success.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="photo-section">
+        <div class="container" style="padding: 0 20px;">
+            <h2>Our Joyful Community in Action</h2>
+            <p style="margin-bottom: 40px; font-size: 1.1rem;">Get a glimpse of the supportive and successful team you'll be joining!</p>
+
+            <div class="video-container">
+                <video controls poster="photo_2025-10-12_20-57-06.jpg">
+                    <source src="uploaded:video_2025-10-12_20-57-19.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption">A member's thank you video celebrating their success with the NexusX community!</div>
+            </div>
+        </div>
+        
+        <div class="photo-grid">
+            <img src="photo_2025-10-12_20-57-30.jpg" alt="Community member photo 1">
+            <img src="photo_2025-10-12_20-57-29.jpg" alt="Community member photo 2">
+            <img src="photo_2025-10-12_20-57-28.jpg" alt="Community member photo 3">
+            <img src="photo_2025-10-12_20-57-27.jpg" alt="Community member photo 4">
+            <img src="photo_2025-10-12_20-57-25.jpg" alt="Community member photo 5">
+            <img src="photo_2025-10-12_20-57-23.jpg" alt="Community member photo 6">
+            <img src="photo_2025-10-12_20-57-22.jpg" alt="Community member photo 7">
+            <img src="photo_2025-10-12_20-57-21.jpg" alt="Community member photo 8">
+            <img src="photo_2025-10-12_20-57-20.jpg" alt="Community member photo 9">
+            <img src="photo_2025-10-12_20-57-16.jpg" alt="Community member photo 10">
+            <img src="photo_2025-10-12_20-57-15.jpg" alt="Community member photo 11">
+            <img src="photo_2025-10-12_20-57-14.jpg" alt="Community member photo 12">
+            <img src="photo_2025-10-12_20-57-12.jpg" alt="Community member photo 13">
+            <img src="photo_2025-10-12_20-57-11.jpg" alt="Community member photo 14">
+            <img src="photo_2025-10-12_20-57-10.jpg" alt="Community member photo 15">
+            <img src="photo_2025-10-12_20-57-09.jpg" alt="Community member photo 16">
+            <img src="photo_2025-10-12_20-57-08.jpg" alt="Community member photo 17">
+            <img src="photo_2025-10-12_20-57-04.jpg" alt="Community member photo 18">
+            <img src="photo_2025-10-12_20-57-17.jpg" alt="Community member photo 19">
+        </div>
+    </section>
+    
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Start Your Joyful Financial Journey?</h2>
+            <p>We are so excited for you to take this next step! For details of further steps and to officially begin your training, please send a kind email to our dedicated training desk today:</p>
+            
+            <a href="mailto:training@olaolu.com" class="cta-email">training@olaolu.com</a>
+            
+            <p style="margin-top: 30px; font-size: 1.5rem;">**We are waiting for you! 😇💝🙏🏽**</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            &copy; 2025 Program Information. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
