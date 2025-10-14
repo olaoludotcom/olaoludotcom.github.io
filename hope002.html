@@ -1,10 +1,3 @@
-That's a great idea\! Adding a visual section immediately after the registration step will reinforce the excitement and social aspect of joining the community.
-
-I've created a new section called **"Our Joyful Community in Action"** and placed it immediately after the first step card in the **Roadmap** section. The images are displayed in a responsive grid for a large, clear, and engaging view.
-
-Here is the complete, updated HTML code:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -181,7 +174,7 @@ Here is the complete, updated HTML code:
             font-size: 1.1rem;
         }
 
-        /* --- Ecosystem Section Styles --- */
+        /* --- New Ecosystem Section Styles --- */
         .ecosystem {
             padding: 80px 20px;
             background-color: var(--white);
@@ -252,7 +245,7 @@ Here is the complete, updated HTML code:
         /* --- Roadmap Section --- */
         .roadmap {
             padding: 80px 20px;
-            background-color: var(--light-bg); 
+            background-color: var(--light-bg); /* Changed BG to light-bg to alternate sections */
             text-align: center;
         }
         .roadmap h2 {
@@ -266,7 +259,7 @@ Here is the complete, updated HTML code:
             gap: 30px;
         }
         .step-card {
-            background-color: var(--white);
+            background-color: var(--white); /* Changed BG to white */
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
@@ -300,33 +293,6 @@ Here is the complete, updated HTML code:
         }
         .link-box {
              margin-top: 15px;
-        }
-        
-        /* --- New Photo Grid Section --- */
-        .photo-section {
-            padding: 60px 20px;
-            background-color: var(--white);
-            text-align: center;
-        }
-        .photo-section h2 {
-            font-size: 2.2rem;
-            color: var(--dark-green);
-            margin-bottom: 40px;
-        }
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .photo-grid img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            transition: transform 0.3s ease;
-        }
-        .photo-grid img:hover {
-            transform: scale(1.02);
         }
 
         /* --- Final CTA Section --- */
@@ -457,7 +423,7 @@ Here is the complete, updated HTML code:
             <p>In this simple, three-part model, we all play a crucial and supportive role to ensure security, expertise, and shared success. This is how your growth is managed:</p>
 
             <div class="image-gallery">
-                <img src="photo_2025-10-12_20-57-06.jpg" alt="A visual representing the NexusX Team's expertise." />
+                <img src="photo_2025-10-12_20-57-06.jpg" alt="A supporting visual representing the NexusX Team's expertise." />
             </div>
 
             <div class="roles-grid">
@@ -496,25 +462,7 @@ Here is the complete, updated HTML code:
                     <p>Your **Exclusive Invite Code:**</p>
                     <div class="code-box">65ATBM</div>
                 </div>
-
-                <div class="step-card" style="grid-column: span 3; border-top: 5px solid var(--primary-color); background-color: var(--light-bg);">
-                     <div class="photo-section" style="padding: 0;">
-                        <h2 style="margin-bottom: 20px; padding-top: 10px;">Our Joyful Community in Action</h2>
-                        <p style="margin-bottom: 20px;">Get a glimpse of the supportive and successful team you'll be joining!</p>
-                        <div class="photo-grid">
-                            <img src="photo_2025-10-12_20-57-30.jpg" alt="Community member photo 1">
-                            <img src="photo_2025-10-12_20-57-29.jpg" alt="Community member photo 2">
-                            <img src="photo_2025-10-12_20-57-28.jpg" alt="Community member photo 3">
-                            <img src="photo_2025-10-12_20-57-27.jpg" alt="Community member photo 4">
-                            <img src="photo_2025-10-12_20-57-25.jpg" alt="Community member photo 5">
-                            <img src="photo_2025-10-12_20-57-23.jpg" alt="Community member photo 6">
-                            <img src="photo_2025-10-12_20-57-22.jpg" alt="Community member photo 7">
-                            <img src="photo_2025-10-12_20-57-21.jpg" alt="Community member photo 8">
-                            <img src="photo_2025-10-12_20-57-20.jpg" alt="Community member photo 9">
-                            <img src="photo_2025-10-12_20-57-16.jpg" alt="Community member photo 10">
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="step-card">
                     <span>2</span>
                     <h3>Fund Your Future</h3>
@@ -560,4 +508,3 @@ Here is the complete, updated HTML code:
 
 </body>
 </html>
-```
