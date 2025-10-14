@@ -297,19 +297,18 @@
         
         /* --- New Photo Grid Section --- */
         .photo-section {
-            padding: 80px 20px; /* Increased padding for emphasis */
+            padding: 60px 20px;
             background-color: var(--white);
             text-align: center;
         }
         .photo-section h2 {
-            font-size: 2.8rem; /* Larger font size */
+            font-size: 2.2rem;
             color: var(--dark-green);
             margin-bottom: 40px;
-            font-weight: bold; /* Bold text */
         }
         .photo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjusted min-width for more images */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
         .photo-grid img {
@@ -318,11 +317,6 @@
             border-radius: 10px;
             box-shadow: var(--box-shadow);
             transition: transform 0.3s ease;
-            /* Ensure images are visually large and regular */
-            max-width: 100%; 
-            height: auto;
-            object-fit: cover;
-            aspect-ratio: 1 / 1; /* Keep images square for a neat grid */
         }
         .photo-grid img:hover {
             transform: scale(1.02);
@@ -495,7 +489,25 @@
                     <p>Your **Exclusive Invite Code:**</p>
                     <div class="code-box">65ATBM</div>
                 </div>
-                
+
+                <div class="step-card" style="grid-column: span 3; border-top: 5px solid var(--primary-color); background-color: var(--light-bg);">
+                     <div class="photo-section" style="padding: 0;">
+                        <h2 style="margin-bottom: 20px; padding-top: 10px;">Our Joyful Community in Action</h2>
+                        <p style="margin-bottom: 20px;">Get a glimpse of the supportive and successful team you'll be joining!</p>
+                        <div class="photo-grid">
+                            <img src="photo_2025-10-12_20-57-30.jpg" alt="Community member photo 1">
+                            <img src="photo_2025-10-12_20-57-29.jpg" alt="Community member photo 2">
+                            <img src="photo_2025-10-12_20-57-28.jpg" alt="Community member photo 3">
+                            <img src="photo_2025-10-12_20-57-27.jpg" alt="Community member photo 4">
+                            <img src="photo_2025-10-12_20-57-25.jpg" alt="Community member photo 5">
+                            <img src="photo_2025-10-12_20-57-23.jpg" alt="Community member photo 6">
+                            <img src="photo_2025-10-12_20-57-22.jpg" alt="Community member photo 7">
+                            <img src="photo_2025-10-12_20-57-21.jpg" alt="Community member photo 8">
+                            <img src="photo_2025-10-12_20-57-20.jpg" alt="Community member photo 9">
+                            <img src="photo_2025-10-12_20-57-16.jpg" alt="Community member photo 10">
+                        </div>
+                    </div>
+                </div>
                 <div class="step-card">
                     <span>2</span>
                     <h3>Fund Your Future</h3>
@@ -522,34 +534,6 @@
         </div>
     </section>
 
-    <section class="photo-section">
-        <div class="container">
-            <h2>Our Joyful Community in Action</h2>
-            <p style="margin-bottom: 40px; font-size: 1.1rem;">Get a glimpse of the supportive and successful team you'll be joining!</p>
-            <div class="photo-grid">
-                <img src="photo_2025-10-12_20-57-30.jpg" alt="Community member photo 1">
-                <img src="photo_2025-10-12_20-57-29.jpg" alt="Community member photo 2">
-                <img src="photo_2025-10-12_20-57-28.jpg" alt="Community member photo 3">
-                <img src="photo_2025-10-12_20-57-27.jpg" alt="Community member photo 4">
-                <img src="photo_2025-10-12_20-57-25.jpg" alt="Community member photo 5">
-                <img src="photo_2025-10-12_20-57-23.jpg" alt="Community member photo 6">
-                <img src="photo_2025-10-12_20-57-22.jpg" alt="Community member photo 7">
-                <img src="photo_2025-10-12_20-57-21.jpg" alt="Community member photo 8">
-                <img src="photo_2025-10-12_20-57-20.jpg" alt="Community member photo 9">
-                <img src="photo_2025-10-12_20-57-16.jpg" alt="Community member photo 10">
-                <img src="photo_2025-10-12_20-57-15.jpg" alt="Community member photo 11">
-                <img src="photo_2025-10-12_20-57-14.jpg" alt="Community member photo 12">
-                <img src="photo_2025-10-12_20-57-12.jpg" alt="Community member photo 13">
-                <img src="photo_2025-10-12_20-57-11.jpg" alt="Community member photo 14">
-                <img src="photo_2025-10-12_20-57-10.jpg" alt="Community member photo 15">
-                <img src="photo_2025-10-12_20-57-09.jpg" alt="Community member photo 16">
-                <img src="photo_2025-10-12_20-57-08.jpg" alt="Community member photo 17">
-                <img src="photo_2025-10-12_20-57-04.jpg" alt="Community member photo 18">
-                <img src="photo_2025-10-12_20-57-17.jpg" alt="Community member photo 19">
-            </div>
-        </div>
-    </section>
-    
     <section class="final-cta">
         <div class="container">
             <h2>Ready to Start Your Joyful Financial Journey?</h2>
