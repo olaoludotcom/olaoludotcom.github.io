@@ -438,13 +438,15 @@
         .reward-tier:hover {
              transform: scale(1.02);
         }
+        /* RESTORED: Tier heading font size is larger than normal text */
         .tier-deposit {
-            font-size: 1.1rem;
+            font-size: 1.1rem; /* Restored to slightly larger than body text */
             font-weight: 700;
             color: var(--dark-green);
             display: block;
             margin-bottom: 5px;
         }
+        /* UPDATED: Reduced font size for deposit amount inside the green box */
         .tier-deposit span {
             background-color: var(--primary-color); /* Green highlight for the deposit amount */
             color: var(--white);
@@ -452,6 +454,7 @@
             border-radius: 5px;
             margin-right: 5px;
             white-space: nowrap; /* Keep it on one line */
+            font-size: 1rem; /* Reduced to standard text size, but still bold/in a box */
         }
         .tier-bonus {
             font-size: 1rem;
@@ -702,7 +705,7 @@
                 
                 <div class="role-card">
                     <h3>1. NexusX Team (The Experts)</h3>
-                    <p>Led by Ethan, this team of **over 200 professional analysts** performs all the expert trading and strategy execution. They receive a <strong>15% commission</strong> proportional to overall profits, which covers their daily operations and technical research and development.</p>
+                    <p>Led by Ethan, this team of **over 200 professional analysts** performs all the expert trading and strategy execution. They receives a <strong>15% commission</strong> proportional to overall profits, which covers their daily operations and technical research and development.</p>
                 </div>
 
                 <div class="role-card">
